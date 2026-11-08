@@ -14,8 +14,9 @@ Site statique (HTML, CSS et JavaScript, sans outil de compilation) : il suffit d
 | Accueil — en-tête + hero + « Quel horizon envisagez-vous ? » | `index.html` | ✅ Validé |
 | Accueil — Destinations & programmes (Turquie à la une, Chine, TCF) | `index.html` | ✅ Validé |
 | Accueil — Comment ça marche (frise en 4 étapes) | `index.html` | ✅ Validé |
-| Accueil — Transparence (Horizon Monde / partenaires) + harmonisation des fonds | `index.html` | ✅ À valider |
-| Accueil — sections suivantes (réseaux, appel final, pied de page) | `index.html` | Version 1, à reprendre une à une |
+| Accueil — Transparence (Horizon Monde / partenaires) + harmonisation des fonds | `index.html` | ✅ Validé |
+| Accueil — Réseaux (WhatsApp, Instagram, TikTok ; Facebook en attente du lien) | `index.html` | ✅ À valider |
+| Accueil — appel final et pied de page | `index.html` | Version 1, à reprendre |
 | Pages du menu : Destinations, Opportunités, Services, Comment ça marche, À propos, Contact | à créer | À faire |
 
 Le menu renvoie déjà vers les pages prévues ; les liens fonctionneront au fur et à mesure.
@@ -64,7 +65,8 @@ Dans `assets/js/main.js`, en haut du fichier (`HM_CONFIG`) :
 - `whatsappNumber` : numéro WhatsApp Business au format international, sans `+` ni espaces
   (ex. `237698994839`). Tant qu'il est vide, les boutons ouvrent WhatsApp sans destinataire.
 - `social.facebook`, `social.instagram`, `social.tiktok` : adresses des pages. Un lien laissé
-  vide est masqué sur le site.
+  vide est masqué sur le site. Instagram (@horizon_monde) et TikTok (@mancebright) sont
+  renseignés ; l'adresse de la page Facebook reste à ajouter.
 
 Tous les boutons WhatsApp ouvrent une conversation avec un message déjà rédigé
 (attribut `data-message` dans le HTML).
