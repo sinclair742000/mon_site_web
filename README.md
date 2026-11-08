@@ -18,9 +18,10 @@ Site statique (HTML, CSS et JavaScript, sans outil de compilation) : il suffit d
 | Accueil — Réseaux (WhatsApp, Facebook, Instagram, TikTok) | `index.html` | ✅ Validé |
 | Accueil — appel final (arche) et nouveau pied de page | `index.html` | ✅ Validé |
 | Accueil — fonds en dégradés « le ciel au fil de la journée » (globe, ciel, lever et coucher de soleil) | `index.html` | ✅ Validé |
-| Nouvelle direction « Éditorial immersif » (bleu nuit, ivoire, pierre, accent ambre, titres Playfair Display) | accueil + Destinations | ✅ À valider |
-| Page Destinations (Turquie à la une, Chine, renvoi TCF) | `destinations.html` | ✅ À valider |
-| Pages Opportunités, Services (dont TCF), Comment ça marche, À propos, Contact | à créer | À faire |
+| Nouvelle direction « Éditorial immersif » (bleu nuit, ivoire, pierre, accent ambre, titres Playfair Display) + logos officiels des réseaux | accueil + Destinations | ✅ Validé |
+| Page Destinations (Turquie à la une, Chine, renvoi TCF) | `destinations.html` | ✅ Validé |
+| Page Opportunités (pour qui ?, études, voyages, affaires, mobilité) | `opportunites.html` | ✅ À valider |
+| Pages Services (dont TCF), Comment ça marche, À propos, Contact | à créer | À faire |
 
 Le menu renvoie déjà vers les pages prévues ; les liens fonctionneront au fur et à mesure.
 
@@ -29,6 +30,7 @@ Le menu renvoie déjà vers les pages prévues ; les liens fonctionneront au fur
 ```
 index.html                Page d'accueil
 destinations.html         Page Destinations (Turquie, Chine, renvoi vers le TCF)
+opportunites.html         Page Opportunités (études, voyages, affaires, mobilité)
 assets/css/style.css      Styles communs à toutes les pages
 assets/js/main.js         Script commun (liens WhatsApp, menu mobile, animations)
 assets/img/               Logo, emblème, favicon, image de partage
@@ -49,6 +51,9 @@ des photos sous licence avec autorisation des modèles est recommandée.
 | `voyager-*`, `cappadoce-mini-*` | `photo-1530789253388-582c481c54b0` |
 | `etudier-*` | `photo-1531482615713-2afd69097998` |
 | `opportunites-*`, `porte-large-*`, `porte-mobile-*` | `photo-1473625247510-8ceb1760943f` |
+| `tarmac-large-*`, `tarmac-mobile-*` | `photo-1542296332-2e4473faf563` |
+| `affaires-*` | `photo-1573164713988-8665fc963095` |
+| `departs-*` | `photo-1517400508447-f8dd518b86db` |
 | `turquie-*`, `turquie-large-*` | `photo-1524231757912-21f4fe3a7200` |
 | `chine-*` | `photo-1545893835-abaa50cbe628` |
 | `tcf-*` | `photo-1541178735493-479c1a27ed24` |
