@@ -11,9 +11,7 @@
   --gold-light: #E8C063;
   --gold-text: #94661F;          /* or lisible sur fond clair (contraste AA) */
   --gold-text-strong: #7A5214;   /* or lisible sur les fonds bleutés (contraste AA) */
-  --mist: #E6EDF5;               /* bleu brume */
   --sky: #E9EFF7;                /* ciel (en-tête, haut du hero) */
-  --sky-deep: #DCE6F1;           /* bas du hero */
   --cream: #FBF8F2;
   --white: #FFFFFF;
   --ink: #18233A;
@@ -124,7 +122,7 @@ ul, ol { margin: 0; padding: 0; }
 /* ---------- En-tête ---------- */
 .site-header {
   position: sticky; top: 0; z-index: 100;
-  background: rgba(233, 239, 247, .94);
+  background: rgba(234, 241, 249, .92);
   backdrop-filter: saturate(1.4) blur(12px);
   -webkit-backdrop-filter: saturate(1.4) blur(12px);
   border-bottom: 1px solid transparent;
@@ -362,7 +360,13 @@ ul, ol { margin: 0; padding: 0; }
     justify-content: center;
     min-height: clamp(640px, calc(100svh - var(--header-h)), 900px);
     padding: 32px 0 88px;
-    background: linear-gradient(180deg, var(--sky) 0%, var(--sky-deep) 100%); color: var(--ink);
+    background:
+      linear-gradient(0deg, #D6E4F2 0, transparent 120px),
+      radial-gradient(900px 520px at 78% 88%, rgba(232, 192, 99, .3), transparent 62%),
+      radial-gradient(820px 520px at 6% 8%, var(--halo-white), transparent 60%),
+      radial-gradient(760px 520px at 30% 105%, rgba(140, 184, 232, .45), transparent 65%),
+      linear-gradient(180deg, #EAF1F9 0%, #D6E4F2 100%);
+    color: var(--ink);
   }
   .hero-inner {
     position: relative;
@@ -532,19 +536,62 @@ ul, ol { margin: 0; padding: 0; }
 
 /* ---------- Sections ---------- */
 .section { padding: clamp(64px, 9vw, 110px) 0; }
-/* Fonds : toujours clairs, dans les couleurs du logo, mais chaque section a sa propre
-   lumière ou sa propre matière (globe, photo de ciel, lever de soleil, grand logotype…). */
-.tone-mist { background: var(--mist); }
-/* Ciel azur, pour la section du globe */
-.tone-azure { background: linear-gradient(180deg, #D3E2F1 0%, #E2EBF5 55%, #EAF0F7 100%); }
-/* Lever de soleil : bleu clair qui se réchauffe d'une lueur dorée vers le bas */
-.tone-dawn {
-  background:
-    radial-gradient(1100px 460px at 50% 112%, rgba(232, 192, 99, .42), transparent 68%),
-    linear-gradient(180deg, #DCE7F3 0%, #E9EFF6 60%, #F1EEE8 100%);
+/* ---------- Fonds en dégradés : « le ciel au fil de la journée » ----------
+   Chaque section a son propre dégradé (halos azur, pervenche, blanc et or) ; la couleur du
+   bas d'une section rejoint celle du haut de la suivante, pour une page qui coule sans
+   coupure : aube (hero) → matin → mi-journée → après-midi doré → crépuscule bleu →
+   coucher de soleil (appel final) → soir (pied de page). */
+:root {
+  --halo-azure: rgba(140, 184, 232, .55);
+  --halo-periwinkle: rgba(186, 198, 240, .65);
+  --halo-white: rgba(255, 255, 255, .8);
+  --halo-gold: rgba(232, 192, 99, .4);
 }
-/* Lueur douce pour l'appel final */
-.tone-glow { background: linear-gradient(180deg, #E6EDF5 0%, #D6E2EF 100%); }
+.bg-morning {
+  background:
+    linear-gradient(180deg, #D6E4F2 0, transparent 150px),
+    linear-gradient(0deg, #E4ECF6 0, transparent 150px),
+    radial-gradient(720px 520px at 82% 32%, var(--halo-white), transparent 62%),
+    radial-gradient(900px 620px at -5% 0%, var(--halo-azure), transparent 62%),
+    radial-gradient(760px 520px at 105% 100%, var(--halo-periwinkle), transparent 60%),
+    linear-gradient(180deg, #D6E4F2 0%, #E4ECF6 100%);
+}
+.bg-midday {
+  background:
+    linear-gradient(180deg, #E4ECF6 0, transparent 150px),
+    linear-gradient(0deg, #D9E5F2 0, transparent 150px),
+    radial-gradient(820px 560px at 8% 48%, rgba(232, 192, 99, .24), transparent 62%),
+    radial-gradient(900px 620px at 102% 88%, var(--halo-azure), transparent 60%),
+    radial-gradient(760px 420px at 70% -5%, var(--halo-white), transparent 60%),
+    linear-gradient(180deg, #E4ECF6 0%, #D9E5F2 100%);
+}
+.bg-afternoon {
+  background:
+    linear-gradient(180deg, #DDE7F3 0, transparent 150px),
+    linear-gradient(0deg, #F1ECE3 0, transparent 150px),
+    radial-gradient(1100px 500px at 50% 116%, var(--halo-gold), transparent 68%),
+    radial-gradient(760px 520px at 100% -5%, var(--halo-azure), transparent 60%),
+    radial-gradient(640px 440px at -5% 35%, var(--halo-white), transparent 60%),
+    linear-gradient(180deg, #DDE7F3 0%, #E8ECF2 55%, #F1ECE3 100%);
+}
+.bg-dusk {
+  background:
+    linear-gradient(180deg, #F1ECE3 0, transparent 150px),
+    linear-gradient(0deg, #D3E0EF 0, transparent 150px),
+    radial-gradient(800px 460px at 10% 18%, var(--halo-white), transparent 62%),
+    radial-gradient(900px 620px at 104% 30%, var(--halo-azure), transparent 62%),
+    radial-gradient(860px 520px at 28% 112%, var(--halo-periwinkle), transparent 60%),
+    linear-gradient(180deg, #F1ECE3 0%, #DEE6F1 32%, #D3E0EF 100%);
+}
+.bg-sunset {
+  background:
+    linear-gradient(180deg, #D3E0EF 0, transparent 150px),
+    linear-gradient(0deg, #E3E6EE 0, transparent 150px),
+    radial-gradient(760px 440px at 50% 104%, rgba(232, 192, 99, .55), transparent 70%),
+    radial-gradient(900px 520px at -5% 0%, rgba(140, 184, 232, .42), transparent 60%),
+    radial-gradient(900px 520px at 105% 0%, var(--halo-periwinkle), transparent 60%),
+    linear-gradient(180deg, #D3E0EF 0%, #E3E6EE 100%);
+}
 
 .section-head { max-width: 720px; margin: 0 auto 48px; text-align: center; }
 .section-head p:last-child { color: var(--muted); font-size: 1.05rem; }
@@ -662,7 +709,10 @@ ul, ol { margin: 0; padding: 0; }
 }
 .process::before {   /* voile clair : le ciel reste visible, le texte reste lisible */
   content: ""; position: absolute; inset: 0; z-index: -1;
-  background: linear-gradient(180deg, rgba(233, 239, 247, .9) 0%, rgba(233, 239, 247, .7) 100%);
+  background:
+    linear-gradient(180deg, #D9E5F2 0, transparent 140px),
+    linear-gradient(0deg, #DDE7F3 0, transparent 140px),
+    linear-gradient(180deg, rgba(217, 229, 242, .93) 0%, rgba(221, 231, 243, .74) 100%);
 }
 .process-panel {
   padding: 28px 20px; border-radius: 26px;
@@ -674,8 +724,11 @@ ul, ol { margin: 0; padding: 0; }
 .process .timeline-num { border-color: rgba(14, 43, 77, .16); }
 @media (min-width: 960px) {
   .process::before {
-    background: linear-gradient(90deg, rgba(233, 239, 247, .95) 0%, rgba(233, 239, 247, .86) 38%,
-      rgba(233, 239, 247, .35) 72%, rgba(233, 239, 247, .15) 100%);
+    background:
+      linear-gradient(180deg, #D9E5F2 0, transparent 160px),
+      linear-gradient(0deg, #DDE7F3 0, transparent 160px),
+      linear-gradient(90deg, rgba(217, 229, 242, .96) 0%, rgba(217, 229, 242, .86) 38%,
+        rgba(221, 231, 243, .3) 72%, rgba(232, 192, 99, .14) 100%);
   }
   .process-panel { padding: 44px 44px 40px; }
 }
@@ -767,11 +820,12 @@ ul, ol { margin: 0; padding: 0; }
 /* Réseaux */
 .social {
   position: relative; overflow: hidden;
-  background: radial-gradient(800px 420px at 12% 18%, rgba(255, 255, 255, .75), transparent 62%), var(--mist);
 }
 .social > .container { position: relative; z-index: 1; }
 .social-wordmark {   /* grand logotype en filigrane */
-  position: absolute; z-index: 0; left: 50%; bottom: -.16em; transform: translateX(-50%);
+  position: absolute; z-index: 0; left: 50%; bottom: -.1em; transform: translateX(-50%);
+  -webkit-mask-image: linear-gradient(180deg, #000 25%, transparent 92%);
+  mask-image: linear-gradient(180deg, #000 25%, transparent 92%);   /* s'efface dans le fondu du bas */
   white-space: nowrap; pointer-events: none; user-select: none;
   font-family: var(--font-title); font-weight: 800; text-transform: uppercase;
   font-size: clamp(4.5rem, 16vw, 15rem); letter-spacing: -.02em; line-height: 1;
@@ -834,7 +888,12 @@ ul, ol { margin: 0; padding: 0; }
 
 /* ---------- Pied de page ---------- */
 .site-footer {
-  background: linear-gradient(180deg, #C9D8E8 0%, #BCCDE1 100%);
+  background:
+    linear-gradient(180deg, #E3E6EE 0, transparent 120px),
+    radial-gradient(900px 380px at 50% 0%, rgba(232, 192, 99, .22), transparent 65%),
+    radial-gradient(820px 520px at 105% 105%, rgba(110, 158, 212, .45), transparent 60%),
+    radial-gradient(700px 460px at -5% 100%, var(--halo-periwinkle), transparent 60%),
+    linear-gradient(180deg, #E3E6EE 0%, #C9D8E9 38%, #B6CAE0 100%);
   color: #2E3A50; padding: clamp(56px, 8vw, 88px) 0 28px; font-size: .95rem;
 }
 .footer-statement {
