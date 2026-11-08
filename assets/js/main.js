@@ -12,7 +12,7 @@ const HM_CONFIG = {
   social: {
     facebook: "",                                         // adresse de la page Facebook, à ajouter
     instagram: "https://www.instagram.com/horizon_monde/",
-    tiktok: "https://www.tiktok.com/@mancebright",
+    tiktok: "https://www.tiktok.com/@horizon_monde",
   },
 };
 

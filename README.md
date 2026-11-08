@@ -65,7 +65,7 @@ Dans `assets/js/main.js`, en haut du fichier (`HM_CONFIG`) :
 - `whatsappNumber` : numéro WhatsApp Business au format international, sans `+` ni espaces
   (ex. `237698994839`). Tant qu'il est vide, les boutons ouvrent WhatsApp sans destinataire.
 - `social.facebook`, `social.instagram`, `social.tiktok` : adresses des pages. Un lien laissé
-  vide est masqué sur le site. Instagram (@horizon_monde) et TikTok (@mancebright) sont
+  vide est masqué sur le site. Instagram (@horizon_monde) et TikTok (@horizon_monde) sont
   renseignés ; l'adresse de la page Facebook reste à ajouter.
 
 Tous les boutons WhatsApp ouvrent une conversation avec un message déjà rédigé
