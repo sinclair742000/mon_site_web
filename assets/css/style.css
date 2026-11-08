@@ -936,7 +936,7 @@ h4 { font-family: var(--font-title); color: var(--navy); font-weight: 700; line-
 .facts dt { font-size: .68rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
 .facts dd { margin: 4px 0 0; font-family: var(--font-title); font-weight: 600; font-size: .98rem; color: var(--navy); }
 
-.mosaic { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: clamp(56px, 7vw, 88px); }
+.mosaic { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: clamp(44px, 5vw, 64px); }
 .mosaic-tile {
   position: relative; margin: 0; overflow: hidden; border-radius: 20px; aspect-ratio: 1 / 1;
   box-shadow: 0 30px 60px -42px rgba(14, 43, 77, .6);
