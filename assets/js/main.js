@@ -123,6 +123,24 @@ const HM_CONFIG = {
     }, { threshold: 0.35 }).observe(heroSection);
   }
 
+  /* ---------- Frise « Comment ça marche » : le fil doré suit le défilement ---------- */
+  const timeline = document.querySelector(".timeline");
+  if (timeline && !reduceMotion) {
+    let pending = false;
+    const paint = function () {
+      pending = false;
+      const box = timeline.getBoundingClientRect();
+      const start = window.innerHeight * 0.75;
+      const progress = Math.min(Math.max((start - box.top) / box.height, 0), 1);
+      timeline.style.setProperty("--progress", progress.toFixed(3));
+    };
+    window.addEventListener("scroll", function () {
+      if (!pending) { pending = true; window.requestAnimationFrame(paint); }
+    }, { passive: true });
+    window.addEventListener("resize", paint);
+    paint();
+  }
+
   /* ---------- Apparition progressive des blocs ---------- */
   const reveals = document.querySelectorAll(".reveal");
   if ("IntersectionObserver" in window) {
