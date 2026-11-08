@@ -11,8 +11,8 @@ Site statique (HTML, CSS et JavaScript, sans outil de compilation) : il suffit d
 
 | Étape | Contenu | État |
 |-------|---------|------|
-| Accueil — en-tête + hero + « Quel horizon envisagez-vous ? » | `index.html` | ✅ À valider |
-| Accueil — sections suivantes (Turquie, parcours, transparence, réseaux, pied de page) | `index.html` | Version 1, à reprendre après validation du hero |
+| Accueil — en-tête + hero + « Quel horizon envisagez-vous ? » | `index.html` | ✅ Validé |
+| Accueil — sections suivantes (Turquie, parcours, transparence, réseaux, pied de page) | `index.html` | Version 1, à reprendre (prochaine étape) |
 | Pages du menu : Destinations, Opportunités, Services, Comment ça marche, À propos, Contact | à créer | À faire |
 
 Le menu renvoie déjà vers les pages prévues ; les liens fonctionneront au fur et à mesure.
