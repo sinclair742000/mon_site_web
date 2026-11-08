@@ -17,7 +17,7 @@ Site statique (HTML, CSS et JavaScript, sans outil de compilation) : il suffit d
 | Accueil — Transparence (Horizon Monde / partenaires) + harmonisation des fonds | `index.html` | ✅ Validé |
 | Accueil — Réseaux (WhatsApp, Facebook, Instagram, TikTok) | `index.html` | ✅ Validé |
 | Accueil — appel final (arche) et nouveau pied de page | `index.html` | ✅ À valider |
-| Accueil — choix des fonds de section | `index.html` | En cours de révision |
+| Accueil — fonds de section (bleus du logo, bleu nuit en ancrage, sans beige ni blanc) | `index.html` | ✅ À valider |
 | Pages du menu : Destinations, Opportunités, Services, Comment ça marche, À propos, Contact | à créer | À faire |
 
 Le menu renvoie déjà vers les pages prévues ; les liens fonctionneront au fur et à mesure.

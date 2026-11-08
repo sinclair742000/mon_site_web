@@ -11,12 +11,12 @@
   --gold: #C28D3A;
   --gold-light: #E8C063;
   --gold-text: #94661F;          /* or lisible sur fond clair (contraste AA) */
-  --gold-text-strong: #8A5E1A;   /* or lisible sur le bleu brume */
+  --gold-text-strong: #7A5214;   /* or lisible sur les fonds bleutés (contraste AA) */
   --mist: #E6EDF5;               /* bleu brume */
-  --sky: #F0F4F9;                /* ciel clair (en-tête, haut du hero) */
-  --sky-deep: #E3EBF4;           /* bas du hero */
+  --mist-deep: #D9E3EF;          /* bleu brume soutenu */
+  --sky: #E9EFF7;                /* ciel (en-tête, haut du hero) */
+  --sky-deep: #DCE6F1;           /* bas du hero */
   --cream: #FBF8F2;
-  --sand: #F1E7D6;               /* sable doré */
   --white: #FFFFFF;
   --ink: #18233A;
   --muted: #556072;
@@ -126,7 +126,7 @@ ul, ol { margin: 0; padding: 0; }
 /* ---------- En-tête ---------- */
 .site-header {
   position: sticky; top: 0; z-index: 100;
-  background: rgba(240, 244, 249, .94);
+  background: rgba(233, 239, 247, .94);
   backdrop-filter: saturate(1.4) blur(12px);
   -webkit-backdrop-filter: saturate(1.4) blur(12px);
   border-bottom: 1px solid transparent;
@@ -518,10 +518,22 @@ ul, ol { margin: 0; padding: 0; }
 
 /* ---------- Sections ---------- */
 .section { padding: clamp(64px, 9vw, 110px) 0; }
-/* Teintes de fond : la page alterne bleu brume (froid) et sable doré (chaud) */
+/* Teintes de fond : uniquement les couleurs du logo.
+   Bleu brume et bleu brume soutenu pour les sections claires, bleu nuit pour les sections
+   d'ancrage ; l'or reste un accent. */
 .tone-mist { background: var(--mist); }
-.tone-sand { background: var(--sand); }
-.tone-mist .eyebrow, .tone-sand .eyebrow { color: var(--gold-text-strong); }   /* contraste AA sur ces fonds */
+.tone-mist-deep { background: var(--mist-deep); }
+.tone-mist .eyebrow, .tone-mist-deep .eyebrow { color: var(--gold-text-strong); }
+.tone-night {
+  color: var(--on-navy);
+  background:
+    radial-gradient(900px 520px at 88% -5%, rgba(35, 84, 140, .55), transparent 62%),
+    radial-gradient(760px 420px at -5% 105%, rgba(194, 141, 58, .14), transparent 60%),
+    var(--navy);
+}
+.tone-night .eyebrow { color: var(--gold-light); }
+.tone-night h2 { color: var(--white); }
+.tone-night .split-head > p, .tone-night .horizons-head > p { color: var(--on-navy); }
 
 .section-head { max-width: 720px; margin: 0 auto 48px; text-align: center; }
 .section-head p:last-child { color: var(--muted); font-size: 1.05rem; }
@@ -633,8 +645,8 @@ ul, ol { margin: 0; padding: 0; }
 }
 
 /* ---------- Comment ça marche ---------- */
-.process .timeline::before { background: rgba(14, 43, 77, .14); }
-.process .timeline-num { border-color: rgba(14, 43, 77, .16); }
+.process .timeline::before { background: rgba(14, 43, 77, .18); }
+.process .timeline-num { border-color: rgba(14, 43, 77, .18); }
 .process-inner { display: grid; gap: 44px; }
 .process-intro h2 { font-size: clamp(2rem, 4.2vw, 3.2rem); letter-spacing: -.025em; line-height: 1.08; margin-bottom: .45em; }
 .process-intro > p:not(.eyebrow) { color: var(--muted); font-size: 1.05rem; max-width: 30em; }
@@ -674,17 +686,6 @@ ul, ol { margin: 0; padding: 0; }
 }
 
 /* ---------- Transparence ---------- */
-/* Seule section sombre de la page : bleu nuit du logo, halo bleu et touche dorée */
-.trust {
-  color: var(--on-navy);
-  background:
-    radial-gradient(900px 520px at 88% -5%, rgba(35, 84, 140, .55), transparent 62%),
-    radial-gradient(760px 420px at -5% 105%, rgba(194, 141, 58, .14), transparent 60%),
-    var(--navy);
-}
-.trust .eyebrow { color: var(--gold-light); }
-.trust .split-head h2 { color: var(--white); }
-.trust .split-head > p { color: var(--on-navy); }
 
 .trust-roles { display: grid; gap: 14px; justify-items: center; }
 .trust-role {
