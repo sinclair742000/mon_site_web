@@ -18,6 +18,7 @@ Site statique (HTML, CSS et JavaScript, sans outil de compilation) : il suffit d
 | Accueil — Réseaux (WhatsApp, Facebook, Instagram, TikTok) | `index.html` | ✅ Validé |
 | Accueil — appel final (arche) et nouveau pied de page | `index.html` | ✅ Validé |
 | Accueil — fonds en dégradés « le ciel au fil de la journée » (globe, ciel, lever et coucher de soleil) | `index.html` | ✅ Validé |
+| Nouvelle direction « Éditorial immersif » (bleu nuit, ivoire, pierre, accent ambre, titres Playfair Display) | accueil + Destinations | ✅ À valider |
 | Page Destinations (Turquie à la une, Chine, renvoi TCF) | `destinations.html` | ✅ À valider |
 | Pages Opportunités, Services (dont TCF), Comment ça marche, À propos, Contact | à créer | À faire |
 
@@ -47,8 +48,8 @@ des photos sous licence avec autorisation des modèles est recommandée.
 | `hero-*`, `hero-mobile-*` | `photo-1589156280159-27698a70f29e` |
 | `voyager-*`, `cappadoce-mini-*` | `photo-1530789253388-582c481c54b0` |
 | `etudier-*` | `photo-1531482615713-2afd69097998` |
-| `opportunites-*` | `photo-1473625247510-8ceb1760943f` |
-| `turquie-*` | `photo-1524231757912-21f4fe3a7200` |
+| `opportunites-*`, `porte-large-*`, `porte-mobile-*` | `photo-1473625247510-8ceb1760943f` |
+| `turquie-*`, `turquie-large-*` | `photo-1524231757912-21f4fe3a7200` |
 | `chine-*` | `photo-1545893835-abaa50cbe628` |
 | `tcf-*` | `photo-1541178735493-479c1a27ed24` |
 | `ciel-*`, `ciel-mobile-*` | `photo-1436491865332-7a61a109cc05` |

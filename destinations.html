@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Destinations : Turquie et Chine — Horizon Monde</title>
   <meta name="description" content="Turquie, notre destination phare, et Chine : voyages, études et opportunités. Repères, lieux à découvrir, conseils pratiques et accompagnement avec Horizon Monde.">
-  <meta name="theme-color" content="#DCE8F5">
+  <meta name="theme-color" content="#F7F2EA">
 
   <meta property="og:type" content="website">
   <meta property="og:locale" content="fr_FR">
@@ -19,7 +19,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800&family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
   <script>document.documentElement.classList.add("js");</script>
 </head>
@@ -64,6 +64,21 @@
 
     <!-- ============ EN-TÊTE DE PAGE ============ -->
     <section class="page-hero" aria-labelledby="page-titre">
+      <div class="page-hero-photo">
+        <picture>
+          <source media="(min-width: 768px)" type="image/avif" sizes="64vw"
+            srcset="assets/img/photos/turquie-large-1280.avif 1280w, assets/img/photos/turquie-large-2000.avif 2000w">
+          <source media="(min-width: 768px)" type="image/webp" sizes="64vw"
+            srcset="assets/img/photos/turquie-large-1280.webp 1280w, assets/img/photos/turquie-large-2000.webp 2000w">
+          <source type="image/avif" sizes="100vw"
+            srcset="assets/img/photos/turquie-arche-480.avif 480w, assets/img/photos/turquie-arche-800.avif 800w">
+          <source type="image/webp" sizes="100vw"
+            srcset="assets/img/photos/turquie-arche-480.webp 480w, assets/img/photos/turquie-arche-800.webp 800w">
+          <img src="assets/img/photos/turquie-large-1280.jpg" width="1280" height="720" fetchpriority="high" decoding="async"
+            alt="Istanbul et la tour de Galata dans la lumière dorée de fin de journée.">
+        </picture>
+      </div>
+      <span class="page-hero-label">Istanbul, Turquie</span>
       <div class="container page-hero-inner">
         <div class="page-hero-text">
           <nav class="breadcrumb hero-anim" style="--d:0" aria-label="Fil d'Ariane">
@@ -81,22 +96,11 @@
             <a class="theme-tcf" href="#tcf"><strong>TCF</strong><small>France, Canada</small></a>
           </nav>
         </div>
-        <figure class="page-hero-media">
-          <div class="page-hero-arch">
-            <picture>
-              <source type="image/avif" sizes="(min-width: 960px) 440px, 100vw" srcset="assets/img/photos/turquie-arche-480.avif 480w, assets/img/photos/turquie-arche-800.avif 800w, assets/img/photos/turquie-arche-1066.avif 1066w">
-              <source type="image/webp" sizes="(min-width: 960px) 440px, 100vw" srcset="assets/img/photos/turquie-arche-480.webp 480w, assets/img/photos/turquie-arche-800.webp 800w, assets/img/photos/turquie-arche-1066.webp 1066w">
-              <img src="assets/img/photos/turquie-arche-800.jpg" sizes="(min-width: 960px) 440px, 100vw" srcset="assets/img/photos/turquie-arche-480.jpg 480w, assets/img/photos/turquie-arche-800.jpg 800w, assets/img/photos/turquie-arche-1066.jpg 1066w"
-                width="800" height="1000" fetchpriority="high" decoding="async" alt="Istanbul et la tour de Galata dans la lumière dorée de fin de journée.">
-            </picture>
-          </div>
-          <figcaption class="page-hero-chip"><span>Destination phare</span>Istanbul, Turquie</figcaption>
-        </figure>
       </div>
     </section>
 
     <!-- ============ TURQUIE ============ -->
-    <section class="section country bg-morning theme-turquie" id="turquie" aria-labelledby="turquie-titre" style="--edge-top:#BED3EA">
+    <section class="section country bg-ivory theme-turquie" id="turquie" aria-labelledby="turquie-titre">
       <div class="container">
         <header class="country-head">
           <div>
@@ -218,7 +222,7 @@
     </section>
 
     <!-- ============ CHINE ============ -->
-    <section class="section country bg-midday theme-chine" id="chine" aria-labelledby="chine-titre">
+    <section class="section country bg-ink theme-chine" id="chine" aria-labelledby="chine-titre">
       <div class="container">
         <header class="country-head">
           <div>
@@ -339,7 +343,7 @@
     </section>
 
     <!-- ============ TCF ============ -->
-    <section class="section bg-dusk tcf-bridge theme-tcf" id="tcf" aria-labelledby="tcf-titre" style="--edge-top:#BCD2EA">
+    <section class="section bg-stone tcf-bridge theme-tcf" id="tcf" aria-labelledby="tcf-titre">
       <div class="container">
         <div class="tcf-panel reveal">
           <div>
@@ -366,7 +370,20 @@
     </section>
 
     <!-- ============ APPEL FINAL ============ -->
-    <section class="section bg-sunset closing" aria-labelledby="cta-titre">
+    <section class="section bg-photo closing" aria-labelledby="cta-titre">
+      <picture class="closing-bg">
+        <source media="(min-width: 768px)" type="image/avif" sizes="100vw"
+          srcset="assets/img/photos/porte-large-1280.avif 1280w, assets/img/photos/porte-large-2000.avif 2000w">
+        <source media="(min-width: 768px)" type="image/webp" sizes="100vw"
+          srcset="assets/img/photos/porte-large-1280.webp 1280w, assets/img/photos/porte-large-2000.webp 2000w">
+        <source media="(min-width: 768px)" sizes="100vw"
+          srcset="assets/img/photos/porte-large-1280.jpg 1280w, assets/img/photos/porte-large-2000.jpg 2000w">
+        <source type="image/avif" sizes="100vw"
+          srcset="assets/img/photos/porte-mobile-600.avif 600w, assets/img/photos/porte-mobile-900.avif 900w">
+        <source type="image/webp" sizes="100vw"
+          srcset="assets/img/photos/porte-mobile-600.webp 600w, assets/img/photos/porte-mobile-900.webp 900w">
+        <img src="assets/img/photos/porte-mobile-600.jpg" alt="" width="600" height="800" loading="lazy" decoding="async">
+      </picture>
       <div class="container">
         <div class="closing-arch reveal">
           <img class="closing-emblem" src="assets/img/emblem.png" alt="" width="132" height="93" loading="lazy" decoding="async">
