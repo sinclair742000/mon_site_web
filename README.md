@@ -16,13 +16,12 @@ Site statique (HTML, CSS et JavaScript, sans outil de compilation) : il suffit d
 | Accueil — Comment ça marche (frise en 4 étapes) | `index.html` | ✅ Validé |
 | Accueil — Transparence (Horizon Monde / partenaires) + harmonisation des fonds | `index.html` | ✅ Validé |
 | Accueil — Réseaux (WhatsApp, Facebook, Instagram, TikTok) | `index.html` | ✅ Validé |
-| Accueil — appel final (arche) et nouveau pied de page | `index.html` | ✅ À valider |
-| Accueil — fonds en dégradés « le ciel au fil de la journée » (globe, ciel, lever et coucher de soleil) | `index.html` | ✅ À valider |
-| Pages du menu : Destinations, Opportunités, Services, Comment ça marche, À propos, Contact | à créer | À faire |
+| Accueil — appel final (arche) et nouveau pied de page | `index.html` | ✅ Validé |
+| Accueil — fonds en dégradés « le ciel au fil de la journée » (globe, ciel, lever et coucher de soleil) | `index.html` | ✅ Validé |
+| Page Destinations (Turquie à la une, Chine) | `destinations.html` | En cours |
+| Pages Opportunités, Services (dont TCF), Comment ça marche, À propos, Contact | à créer | À faire |
 
 Le menu renvoie déjà vers les pages prévues ; les liens fonctionneront au fur et à mesure.
-Le pied de page reprend encore l'ancien plan du site : il sera aligné sur le nouveau menu
-lors de la reprise des sections suivantes.
 
 ## Structure
 
