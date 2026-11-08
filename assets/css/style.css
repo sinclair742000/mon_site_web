@@ -14,7 +14,7 @@
   --gold-text-strong: #8A5E1A;   /* or lisible sur le bleu brume */
   --mist: #E6EDF5;               /* bleu brume */
   --cream: #FBF8F2;
-  --sand: #F3ECDF;
+  --sand: #F1E7D6;               /* sable doré */
   --white: #FFFFFF;
   --ink: #18233A;
   --muted: #556072;
@@ -638,6 +638,11 @@ ul, ol { margin: 0; padding: 0; }
 }
 
 /* ---------- Comment ça marche ---------- */
+/* Fond sable doré : alterne avec le bleu brume de la section Destinations */
+.process { background: var(--sand); }
+.process .eyebrow { color: var(--gold-text-strong); }   /* contraste AA sur le sable */
+.process .timeline::before { background: rgba(14, 43, 77, .14); }
+.process .timeline-num { border-color: rgba(14, 43, 77, .16); }
 .process-inner { display: grid; gap: 44px; }
 .process-intro h2 { font-size: clamp(2rem, 4.2vw, 3.2rem); letter-spacing: -.025em; line-height: 1.08; margin-bottom: .45em; }
 .process-intro > p:not(.eyebrow) { color: var(--muted); font-size: 1.05rem; max-width: 30em; }
