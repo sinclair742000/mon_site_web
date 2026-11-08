@@ -5,7 +5,7 @@
 /* ---------- CONFIGURATION : à compléter ----------
    whatsappNumber : numéro WhatsApp Business au format international,
                     sans « + », sans espaces ni zéros initiaux.
-                    Exemple pour un numéro turc : "905321234567".
+                    Exemple pour un numéro camerounais : "2376XXXXXXXX".
    Réseaux sociaux : laisser vide ("") pour masquer le lien sur le site. */
 const HM_CONFIG = {
   whatsappNumber: "",
@@ -92,6 +92,35 @@ const HM_CONFIG = {
     };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
+  }
+
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* ---------- Hero : léger mouvement de la photo au défilement (ordinateur) ---------- */
+  const heroSection = document.querySelector(".hero");
+  const heroPicture = document.querySelector(".hero-picture");
+  if (heroSection && heroPicture && !reduceMotion) {
+    const desktop = window.matchMedia("(min-width: 1024px)");
+    let ticking = false;
+    const update = function () {
+      ticking = false;
+      if (!desktop.matches) { heroPicture.style.transform = ""; return; }
+      const shift = Math.min(window.scrollY, heroSection.offsetHeight) * 0.06;
+      heroPicture.style.transform = "translate3d(0," + shift.toFixed(1) + "px,0)";
+    };
+    window.addEventListener("scroll", function () {
+      if (!ticking) { ticking = true; window.requestAnimationFrame(update); }
+    }, { passive: true });
+    desktop.addEventListener("change", update);
+    update();
+  }
+
+  /* ---------- Bouton WhatsApp flottant : masqué pendant le hero ---------- */
+  const floatBtn = document.querySelector(".whatsapp-float");
+  if (heroSection && floatBtn && "IntersectionObserver" in window) {
+    new IntersectionObserver(function (entries) {
+      floatBtn.classList.toggle("is-hidden", entries[0].intersectionRatio >= 0.35);
+    }, { threshold: 0.35 }).observe(heroSection);
   }
 
   /* ---------- Apparition progressive des blocs ---------- */
