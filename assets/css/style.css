@@ -10,12 +10,12 @@
   --gold: #C28D3A;
   --gold-light: #E8C063;
   --gold-text: #94661F;          /* or lisible sur fond clair (contraste AA) */
-  --gold-text-strong: #7A5214;   /* or lisible sur les fonds bleutés (contraste AA) */
-  --sky: #E9EFF7;                /* ciel (en-tête, haut du hero) */
+  --gold-text-strong: #6B4810;   /* or lisible sur les fonds bleutés (contraste AA) */
+  --sky: #DCE8F5;                /* ciel (en-tête, haut du hero) */
   --cream: #FBF8F2;
   --white: #FFFFFF;
   --ink: #18233A;
-  --muted: #556072;
+  --muted: #3F4B60;
   --line: #E4E0D8;
   --on-navy: #C9D3E0;
   --whatsapp: #167A47;
@@ -122,7 +122,7 @@ ul, ol { margin: 0; padding: 0; }
 /* ---------- En-tête ---------- */
 .site-header {
   position: sticky; top: 0; z-index: 100;
-  background: rgba(234, 241, 249, .92);
+  background: rgba(220, 232, 245, .92);
   backdrop-filter: saturate(1.4) blur(12px);
   -webkit-backdrop-filter: saturate(1.4) blur(12px);
   border-bottom: 1px solid transparent;
@@ -361,11 +361,11 @@ ul, ol { margin: 0; padding: 0; }
     min-height: clamp(640px, calc(100svh - var(--header-h)), 900px);
     padding: 32px 0 88px;
     background:
-      linear-gradient(0deg, #D6E4F2 0, transparent 120px),
-      radial-gradient(900px 520px at 78% 88%, rgba(232, 192, 99, .3), transparent 62%),
+      linear-gradient(0deg, #BED3EA 0, transparent 120px),
+      radial-gradient(900px 520px at 78% 88%, rgba(232, 182, 80, .38), transparent 62%),
       radial-gradient(820px 520px at 6% 8%, var(--halo-white), transparent 60%),
-      radial-gradient(760px 520px at 30% 105%, rgba(140, 184, 232, .45), transparent 65%),
-      linear-gradient(180deg, #EAF1F9 0%, #D6E4F2 100%);
+      radial-gradient(760px 520px at 30% 105%, rgba(95, 145, 212, .5), transparent 65%),
+      linear-gradient(180deg, #DCE8F5 0%, #BED3EA 100%);
     color: var(--ink);
   }
   .hero-inner {
@@ -544,60 +544,60 @@ ul, ol { margin: 0; padding: 0; }
    Les couleurs de raccord (--edge-top, --edge-bottom) peuvent être redéfinies sur une
    section quand l'ordre des fonds change d'une page à l'autre. */
 :root {
-  --halo-azure: rgba(140, 184, 232, .55);
-  --halo-periwinkle: rgba(186, 198, 240, .65);
-  --halo-white: rgba(255, 255, 255, .8);
-  --halo-gold: rgba(232, 192, 99, .4);
+  --halo-azure: rgba(95, 145, 212, .5);
+  --halo-periwinkle: rgba(140, 155, 225, .55);
+  --halo-white: rgba(255, 255, 255, .6);
+  --halo-gold: rgba(232, 182, 80, .48);
 }
 .bg-morning {
-  --edge-top: #D6E4F2; --edge-bottom: #E4ECF6;
+  --edge-top: #BED3EA; --edge-bottom: #CCDCEF;
   background:
     linear-gradient(180deg, var(--edge-top) 0, transparent 150px),
     linear-gradient(0deg, var(--edge-bottom) 0, transparent 150px),
     radial-gradient(720px 520px at 82% 32%, var(--halo-white), transparent 62%),
     radial-gradient(900px 620px at -5% 0%, var(--halo-azure), transparent 62%),
     radial-gradient(760px 520px at 105% 100%, var(--halo-periwinkle), transparent 60%),
-    linear-gradient(180deg, #D6E4F2 0%, #E4ECF6 100%);
+    linear-gradient(180deg, #BED3EA 0%, #CCDCEF 100%);
 }
 .bg-midday {
-  --edge-top: #E4ECF6; --edge-bottom: #D9E5F2;
+  --edge-top: #CCDCEF; --edge-bottom: #BCD2EA;
   background:
     linear-gradient(180deg, var(--edge-top) 0, transparent 150px),
     linear-gradient(0deg, var(--edge-bottom) 0, transparent 150px),
-    radial-gradient(820px 560px at 8% 48%, rgba(232, 192, 99, .24), transparent 62%),
+    radial-gradient(820px 560px at 8% 48%, rgba(232, 182, 80, .3), transparent 62%),
     radial-gradient(900px 620px at 102% 88%, var(--halo-azure), transparent 60%),
     radial-gradient(760px 420px at 70% -5%, var(--halo-white), transparent 60%),
-    linear-gradient(180deg, #E4ECF6 0%, #D9E5F2 100%);
+    linear-gradient(180deg, #CCDCEF 0%, #BCD2EA 100%);
 }
 .bg-afternoon {
-  --edge-top: #DDE7F3; --edge-bottom: #F1ECE3;
+  --edge-top: #C4D7EC; --edge-bottom: #E5D9C2;
   background:
     linear-gradient(180deg, var(--edge-top) 0, transparent 150px),
     linear-gradient(0deg, var(--edge-bottom) 0, transparent 150px),
     radial-gradient(1100px 500px at 50% 116%, var(--halo-gold), transparent 68%),
     radial-gradient(760px 520px at 100% -5%, var(--halo-azure), transparent 60%),
     radial-gradient(640px 440px at -5% 35%, var(--halo-white), transparent 60%),
-    linear-gradient(180deg, #DDE7F3 0%, #E8ECF2 55%, #F1ECE3 100%);
+    linear-gradient(180deg, #C4D7EC 0%, #D3DDEA 55%, #E5D9C2 100%);
 }
 .bg-dusk {
-  --edge-top: #F1ECE3; --edge-bottom: #D3E0EF;
+  --edge-top: #E5D9C2; --edge-bottom: #B9CEE7;
   background:
     linear-gradient(180deg, var(--edge-top) 0, transparent 150px),
     linear-gradient(0deg, var(--edge-bottom) 0, transparent 150px),
     radial-gradient(800px 460px at 10% 18%, var(--halo-white), transparent 62%),
     radial-gradient(900px 620px at 104% 30%, var(--halo-azure), transparent 62%),
     radial-gradient(860px 520px at 28% 112%, var(--halo-periwinkle), transparent 60%),
-    linear-gradient(180deg, #F1ECE3 0%, #DEE6F1 32%, #D3E0EF 100%);
+    linear-gradient(180deg, #E5D9C2 0%, #CCDBEC 32%, #B9CEE7 100%);
 }
 .bg-sunset {
-  --edge-top: #D3E0EF; --edge-bottom: #E3E6EE;
+  --edge-top: #B9CEE7; --edge-bottom: #D2D4DF;
   background:
     linear-gradient(180deg, var(--edge-top) 0, transparent 150px),
     linear-gradient(0deg, var(--edge-bottom) 0, transparent 150px),
-    radial-gradient(760px 440px at 50% 104%, rgba(232, 192, 99, .55), transparent 70%),
-    radial-gradient(900px 520px at -5% 0%, rgba(140, 184, 232, .42), transparent 60%),
+    radial-gradient(760px 440px at 50% 104%, rgba(232, 182, 80, .6), transparent 70%),
+    radial-gradient(900px 520px at -5% 0%, rgba(95, 145, 212, .45), transparent 60%),
     radial-gradient(900px 520px at 105% 0%, var(--halo-periwinkle), transparent 60%),
-    linear-gradient(180deg, #D3E0EF 0%, #E3E6EE 100%);
+    linear-gradient(180deg, #B9CEE7 0%, #D2D4DF 100%);
 }
 
 .section-head { max-width: 720px; margin: 0 auto 48px; text-align: center; }
@@ -710,16 +710,16 @@ ul, ol { margin: 0; padding: 0; }
 }
 
 /* ---------- Comment ça marche ---------- */
-.process { position: relative; isolation: isolate; overflow: hidden; background: var(--sky); }
+.process { position: relative; isolation: isolate; overflow: hidden; background: #BCD2EA; }
 .process-bg, .process-bg img {
   position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover;
 }
 .process::before {   /* voile clair : le ciel reste visible, le texte reste lisible */
   content: ""; position: absolute; inset: 0; z-index: -1;
   background:
-    linear-gradient(180deg, #D9E5F2 0, transparent 140px),
-    linear-gradient(0deg, #DDE7F3 0, transparent 140px),
-    linear-gradient(180deg, rgba(217, 229, 242, .93) 0%, rgba(221, 231, 243, .74) 100%);
+    linear-gradient(180deg, #BCD2EA 0, transparent 140px),
+    linear-gradient(0deg, #C4D7EC 0, transparent 140px),
+    linear-gradient(180deg, rgba(188, 210, 234, .92) 0%, rgba(196, 215, 236, .72) 100%);
 }
 .process-panel {
   padding: 28px 20px; border-radius: 26px;
@@ -732,10 +732,10 @@ ul, ol { margin: 0; padding: 0; }
 @media (min-width: 960px) {
   .process::before {
     background:
-      linear-gradient(180deg, #D9E5F2 0, transparent 160px),
-      linear-gradient(0deg, #DDE7F3 0, transparent 160px),
-      linear-gradient(90deg, rgba(217, 229, 242, .96) 0%, rgba(217, 229, 242, .86) 38%,
-        rgba(221, 231, 243, .3) 72%, rgba(232, 192, 99, .14) 100%);
+      linear-gradient(180deg, #BCD2EA 0, transparent 160px),
+      linear-gradient(0deg, #C4D7EC 0, transparent 160px),
+      linear-gradient(90deg, rgba(188, 210, 234, .95) 0%, rgba(188, 210, 234, .84) 38%,
+        rgba(196, 215, 236, .3) 72%, rgba(232, 182, 80, .18) 100%);
   }
   .process-panel { padding: 44px 44px 40px; }
 }
@@ -896,12 +896,12 @@ ul, ol { margin: 0; padding: 0; }
 /* ---------- Pied de page ---------- */
 .site-footer {
   background:
-    linear-gradient(180deg, #E3E6EE 0, transparent 120px),
-    radial-gradient(900px 380px at 50% 0%, rgba(232, 192, 99, .22), transparent 65%),
-    radial-gradient(820px 520px at 105% 105%, rgba(110, 158, 212, .45), transparent 60%),
+    linear-gradient(180deg, #D2D4DF 0, transparent 120px),
+    radial-gradient(900px 380px at 50% 0%, rgba(232, 182, 80, .26), transparent 65%),
+    radial-gradient(820px 520px at 105% 105%, rgba(80, 130, 200, .42), transparent 60%),
     radial-gradient(700px 460px at -5% 100%, var(--halo-periwinkle), transparent 60%),
-    linear-gradient(180deg, #E3E6EE 0%, #C9D8E9 38%, #B6CAE0 100%);
-  color: #2E3A50; padding: clamp(56px, 8vw, 88px) 0 28px; font-size: .95rem;
+    linear-gradient(180deg, #D2D4DF 0%, #B9CDE5 38%, #A9C0DC 100%);
+  color: #24304A; padding: clamp(56px, 8vw, 88px) 0 28px; font-size: .95rem;
 }
 .footer-statement {
   margin: 0 0 clamp(32px, 5vw, 48px);
@@ -934,12 +934,12 @@ ul, ol { margin: 0; padding: 0; }
   color: var(--navy); margin-bottom: 16px;
 }
 .footer-links { list-style: none; display: grid; gap: 9px; }
-.footer-links a { color: #2E3A50; text-decoration: none; transition: color .2s; }
+.footer-links a { color: #24304A; text-decoration: none; transition: color .2s; }
 .footer-links a:hover { color: var(--navy); text-decoration: underline; text-underline-offset: 4px; }
 .footer-bottom {
   display: flex; justify-content: space-between; gap: 16px 24px; flex-wrap: wrap;
   margin-top: 48px; padding-top: 24px; border-top: 1px solid rgba(14, 43, 77, .14);
-  font-size: .84rem; color: #3B475C;
+  font-size: .84rem; color: #24304A;
 }
 .footer-bottom p { margin: 0; max-width: 62em; }
 
@@ -962,11 +962,11 @@ h4 { font-family: var(--font-title); color: var(--navy); font-weight: 700; line-
   position: relative; overflow: hidden;
   padding: clamp(28px, 5vw, 56px) 0 clamp(64px, 8vw, 104px);
   background:
-    linear-gradient(0deg, #D6E4F2 0, transparent 120px),
-    radial-gradient(820px 480px at 85% 72%, rgba(232, 192, 99, .3), transparent 62%),
+    linear-gradient(0deg, #BED3EA 0, transparent 120px),
+    radial-gradient(820px 480px at 85% 72%, rgba(232, 182, 80, .38), transparent 62%),
     radial-gradient(760px 480px at 5% 5%, var(--halo-white), transparent 60%),
-    radial-gradient(700px 480px at 35% 105%, rgba(140, 184, 232, .45), transparent 65%),
-    linear-gradient(180deg, #EAF1F9 0%, #D6E4F2 100%);
+    radial-gradient(700px 480px at 35% 105%, rgba(95, 145, 212, .5), transparent 65%),
+    linear-gradient(180deg, #DCE8F5 0%, #BED3EA 100%);
 }
 .page-hero-inner { display: grid; gap: 44px; align-items: center; }
 .breadcrumb { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-bottom: 24px; font-size: .86rem; color: var(--muted); }
@@ -984,7 +984,6 @@ h4 { font-family: var(--font-title); color: var(--navy); font-weight: 700; line-
   box-shadow: 0 18px 40px -32px rgba(14, 43, 77, .6); text-decoration: none;
   transition: transform .3s cubic-bezier(.16, .84, .24, 1), border-color .3s;
 }
-.jump-links a:first-child { border-color: rgba(194, 141, 58, .55); }
 .jump-links a:hover { transform: translateY(-2px); border-color: var(--gold); }
 .jump-links strong { font-family: var(--font-title); color: var(--navy); font-size: 1.02rem; }
 .jump-links small { color: var(--muted); font-size: .82rem; }
@@ -1137,6 +1136,78 @@ h4 { font-family: var(--font-title); color: var(--navy); font-weight: 700; line-
 @media (min-width: 1100px) {
   .why-grid { grid-template-columns: repeat(4, 1fr); }
 }
+
+/* ---------- Couleurs des destinations ----------
+   Inspirées des drapeaux, utilisées en accents (filets, icônes, numéros, halos), jamais
+   sous forme de drapeau. Turquie : rouge et blanc. Chine : rouge et jaune d'or.
+   TCF : bleu, blanc, rouge (France). Les variantes « -text » sont foncées pour rester
+   lisibles (contraste AA) sur les fonds clairs. */
+.theme-turquie {
+  --accent: #E30A17; --accent-text: #A50E1C; --accent-border: rgba(227, 10, 23, .45);
+  --accent-glass: rgba(200, 16, 30, .8); --accent-icon-bg: #E30A17; --accent-icon-fg: #FFFFFF;
+  --accent-tile: linear-gradient(135deg, #FDECEE, #F8CDD1); --accent-tile-fg: #A50E1C;
+  --accent-stripe: #E30A17;
+  --accent-halos:
+    radial-gradient(760px 520px at 96% 4%, rgba(227, 10, 23, .15), transparent 62%),
+    radial-gradient(600px 420px at -2% 72%, rgba(227, 10, 23, .08), transparent 60%);
+}
+.theme-chine {
+  --accent: #DE2910; --accent-text: #9E1C0B; --accent-border: rgba(222, 41, 16, .45);
+  --accent-glass: rgba(190, 34, 12, .8); --accent-icon-bg: #DE2910; --accent-icon-fg: #FFDE00;
+  --accent-tile: linear-gradient(135deg, #FFF6C2, #FFE36A); --accent-tile-fg: #B3200E;
+  --accent-stripe: linear-gradient(90deg, #DE2910 0 72%, #FFDE00 72% 100%);
+  --accent-halos:
+    radial-gradient(760px 520px at 96% 4%, rgba(222, 41, 16, .14), transparent 62%),
+    radial-gradient(560px 380px at 0% 62%, rgba(255, 196, 60, .16), transparent 60%);   /* ambre plutôt que jaune pur : évite une teinte verte sur le bleu */
+}
+.theme-tcf {
+  --accent: #0055A4; --accent-text: #00478A; --accent-border: rgba(0, 85, 164, .4);
+  --accent-glass: rgba(0, 71, 138, .8); --accent-icon-bg: #0055A4; --accent-icon-fg: #FFFFFF;
+  --accent-stripe: linear-gradient(90deg, #0055A4 0 33.3%, #F3F4F6 33.3% 66.6%, #EF4135 66.6% 100%);
+  --accent-halos:
+    radial-gradient(620px 420px at -2% 50%, rgba(0, 85, 164, .13), transparent 60%),
+    radial-gradient(620px 420px at 102% 50%, rgba(239, 65, 53, .11), transparent 60%);
+}
+
+/* Page Destinations */
+.country, .tcf-bridge { position: relative; isolation: isolate; }
+.country::before, .tcf-bridge::before {
+  content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background: var(--accent-halos, none);
+}
+[class*="theme-"] .eyebrow { color: var(--accent-text); }
+.country-name::after {
+  content: ""; display: block; width: 96px; height: 6px; margin-top: 18px; border-radius: 3px;
+  background: var(--accent-stripe, var(--gold));
+}
+[class*="theme-"] .block-title::before { background: var(--accent); }
+[class*="theme-"] .why-icon { background: var(--accent-icon-bg); color: var(--accent-icon-fg); }
+[class*="theme-"] .offer-icon { background: var(--accent-tile); color: var(--accent-tile-fg); }
+[class*="theme-"] .place-num { color: var(--accent-text); }
+[class*="theme-"] .know-icon { border-color: var(--accent-border); color: var(--accent-text); }
+[class*="theme-"] .country-cta { border-color: var(--accent-border); }
+[class*="theme-"] .mosaic-tile figcaption { background: var(--accent-glass); }
+.tcf-panel { position: relative; overflow: hidden; }
+.tcf-panel::before, .dest-feature.theme-turquie::before, .dest-card[class*="theme-"]::before {
+  content: ""; position: absolute; z-index: 3; top: 0; left: 0; right: 0; height: 5px;
+  background: var(--accent-stripe, var(--gold));
+}
+.dest-feature { position: relative; }
+.jump-links a[class*="theme-"] { box-shadow: inset 0 -3px 0 var(--accent), 0 18px 40px -32px rgba(14, 43, 77, .6); }
+.jump-links a[class*="theme-"] small { color: var(--accent-text); font-weight: 600; }
+
+/* Accueil : touches de couleur sur les cartes de destinations */
+.dest-feature.theme-turquie .dest-badge::before,
+.dest-card[class*="theme-"] .dest-badge::before { background: var(--accent); box-shadow: 0 0 0 2px rgba(255, 255, 255, .85); }
+.dest-feature.theme-turquie .dest-kicker { color: var(--accent-text); }
+.dest-feature.theme-turquie .dest-points li::before { background: var(--accent); }
+.dest-card[class*="theme-"] .dest-card-more .icon { color: var(--accent-text); }
+.horizon-tag.theme-turquie { display: inline-flex; align-items: center; gap: 7px; }
+.horizon-tag.theme-turquie::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 2px #fff; }
+
+/* Pied de page : pastille de couleur devant chaque destination */
+.footer-links a[class*="theme-"] { display: inline-flex; align-items: center; gap: 9px; }
+.footer-links a[class*="theme-"]::before { content: ""; flex: 0 0 auto; width: 18px; height: 5px; border-radius: 3px; background: var(--accent-stripe); }
 
 /* ---------- Bouton WhatsApp flottant ---------- */
 .whatsapp-float {
