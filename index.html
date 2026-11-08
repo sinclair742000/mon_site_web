@@ -135,17 +135,19 @@
     </section>
 
     <!-- ============ QUEL HORIZON ENVISAGEZ-VOUS ? ============ -->
-    <section class="horizons tone-night" id="horizons" aria-labelledby="horizons-titre">
+    <section class="horizons tone-azure" id="horizons" aria-labelledby="horizons-titre">
       <div class="container">
-        <header class="horizons-head">
-          <div>
+        <header class="horizons-head horizons-head-globe">
+          <div class="horizons-intro">
             <p class="eyebrow">Vos possibilités</p>
             <h2 id="horizons-titre">Quel horizon envisagez-vous&nbsp;?</h2>
+            <p>
+              Partir découvrir le monde, poursuivre vos études, saisir une nouvelle opportunité :
+              chaque projet international commence par une information juste et un bon accompagnement.
+            </p>
           </div>
-          <p>
-            Partir découvrir le monde, poursuivre vos études, saisir une nouvelle opportunité :
-            chaque projet international commence par une information juste et un bon accompagnement.
-          </p>
+          <img class="horizons-globe" src="assets/img/globe.svg" width="1000" height="1000" loading="lazy" decoding="async"
+            alt="Globe montrant des routes depuis Yaoundé vers Istanbul, Paris, Shanghai et Montréal.">
         </header>
 
         <div class="horizon-grid">
@@ -349,7 +351,20 @@
     </section>
 
     <!-- ============ COMMENT ÇA MARCHE ============ -->
-    <section class="section tone-mist-deep process" id="parcours" aria-labelledby="parcours-titre">
+    <section class="section process" id="parcours" aria-labelledby="parcours-titre">
+      <picture class="process-bg">
+        <source media="(min-width: 960px)" type="image/avif" sizes="100vw"
+          srcset="assets/img/photos/ciel-1280.avif 1280w, assets/img/photos/ciel-1920.avif 1920w">
+        <source media="(min-width: 960px)" type="image/webp" sizes="100vw"
+          srcset="assets/img/photos/ciel-1280.webp 1280w, assets/img/photos/ciel-1920.webp 1920w">
+        <source media="(min-width: 960px)" sizes="100vw"
+          srcset="assets/img/photos/ciel-1280.jpg 1280w, assets/img/photos/ciel-1920.jpg 1920w">
+        <source type="image/avif" sizes="100vw"
+          srcset="assets/img/photos/ciel-mobile-600.avif 600w, assets/img/photos/ciel-mobile-900.avif 900w">
+        <source type="image/webp" sizes="100vw"
+          srcset="assets/img/photos/ciel-mobile-600.webp 600w, assets/img/photos/ciel-mobile-900.webp 900w">
+        <img src="assets/img/photos/ciel-mobile-600.jpg" alt="" width="600" height="800" loading="lazy" decoding="async">
+      </picture>
       <div class="container process-inner">
         <div class="process-intro">
           <p class="eyebrow">Comment ça marche</p>
@@ -367,6 +382,7 @@
           </div>
         </div>
 
+        <div class="process-panel">
         <ol class="timeline">
           <li class="timeline-step reveal">
             <span class="timeline-num" aria-hidden="true">01</span>
@@ -397,11 +413,12 @@
             </div>
           </li>
         </ol>
+        </div>
       </div>
     </section>
 
     <!-- ============ TRANSPARENCE ============ -->
-    <section class="section tone-night trust" id="transparence" aria-labelledby="transparence-titre">
+    <section class="section tone-dawn trust" id="transparence" aria-labelledby="transparence-titre">
       <div class="container">
         <header class="split-head">
           <div>
@@ -446,7 +463,8 @@
     </section>
 
     <!-- ============ RÉSEAUX ============ -->
-    <section class="section tone-mist social" id="reseaux" aria-labelledby="reseaux-titre">
+    <section class="section social" id="reseaux" aria-labelledby="reseaux-titre">
+      <span class="social-wordmark" aria-hidden="true">Horizon Monde</span>
       <div class="container social-inner">
         <div class="social-intro">
           <p class="eyebrow">Suivez-nous</p>
@@ -535,7 +553,7 @@
     </section>
 
     <!-- ============ APPEL FINAL ============ -->
-    <section class="section tone-mist-deep closing" aria-labelledby="cta-titre">
+    <section class="section tone-glow closing" aria-labelledby="cta-titre">
       <div class="container">
         <div class="closing-arch reveal">
           <img class="closing-emblem" src="assets/img/emblem.png" alt="" width="132" height="93" loading="lazy" decoding="async">

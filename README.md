@@ -17,7 +17,7 @@ Site statique (HTML, CSS et JavaScript, sans outil de compilation) : il suffit d
 | Accueil — Transparence (Horizon Monde / partenaires) + harmonisation des fonds | `index.html` | ✅ Validé |
 | Accueil — Réseaux (WhatsApp, Facebook, Instagram, TikTok) | `index.html` | ✅ Validé |
 | Accueil — appel final (arche) et nouveau pied de page | `index.html` | ✅ À valider |
-| Accueil — fonds de section (bleus du logo, bleu nuit en ancrage, sans beige ni blanc) | `index.html` | ✅ À valider |
+| Accueil — fonds lumineux et variés (globe, ciel, lever de soleil, logotype en filigrane) | `index.html` | ✅ À valider |
 | Pages du menu : Destinations, Opportunités, Services, Comment ça marche, À propos, Contact | à créer | À faire |
 
 Le menu renvoie déjà vers les pages prévues ; les liens fonctionneront au fur et à mesure.
@@ -32,6 +32,7 @@ assets/css/style.css      Styles communs à toutes les pages
 assets/js/main.js         Script commun (liens WhatsApp, menu mobile, animations)
 assets/img/               Logo, emblème, favicon, image de partage
 assets/img/photos/        Photos optimisées (AVIF, WebP, JPG en plusieurs largeurs)
+assets/img/globe.svg      Globe filaire : routes depuis Yaoundé (Istanbul, Paris, Shanghai, Montréal)
 outils/optimiser_photos.py  Script de préparation des photos
 ```
 
@@ -50,6 +51,7 @@ des photos sous licence avec autorisation des modèles est recommandée.
 | `turquie-*` | `photo-1524231757912-21f4fe3a7200` |
 | `chine-*` | `photo-1545893835-abaa50cbe628` |
 | `tcf-*` | `photo-1541178735493-479c1a27ed24` |
+| `ciel-*`, `ciel-mobile-*` | `photo-1436491865332-7a61a109cc05` |
 
 Pour remplacer une photo (Pillow requis : `pip install pillow`) :
 
