@@ -10,7 +10,7 @@
 const HM_CONFIG = {
   whatsappNumber: "237698994839",
   social: {
-    facebook: "",                                         // adresse de la page Facebook, à ajouter
+    facebook: "https://www.facebook.com/share/19ufTChZAv/",
     instagram: "https://www.instagram.com/horizon_monde/",
     tiktok: "https://www.tiktok.com/@horizon_monde",
   },
