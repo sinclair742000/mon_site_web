@@ -81,6 +81,11 @@ Dans `assets/js/main.js`, en haut du fichier (`HM_CONFIG`) :
 Tous les boutons WhatsApp ouvrent une conversation avec un message déjà rédigé
 (attribut `data-message` dans le HTML).
 
+Les logos des réseaux sociaux (WhatsApp, Facebook, Instagram, TikTok, Threads, YouTube) sont les
+tracés officiels de [Simple Icons](https://simpleicons.org) (licence CC0), affichés dans les couleurs
+d'origine de chaque marque : WhatsApp #25D366, Facebook #0866FF, dégradé Instagram, TikTok noir
+avec ses reflets cyan et rose, YouTube #FF0000.
+
 ## Mise en ligne (GitHub Pages)
 
 Settings → Pages → *Deploy from a branch* → choisir la branche puis le dossier `/ (root)`.

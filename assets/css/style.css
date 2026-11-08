@@ -23,8 +23,8 @@
   --muted: #4A5466;
   --line: #E3D9C8;
   --on-navy: #C8D1DC;
-  --whatsapp: #167A47;
-  --whatsapp-hover: #11643A;
+  --whatsapp: #25D366;            /* vert officiel WhatsApp */
+  --whatsapp-hover: #1EBE5A;
 
   --font-title: "Montserrat", system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -1306,3 +1306,68 @@ h1, h2,
 
 /* Petits titres du pied de page : capitales espacées, pas la police des grands titres */
 .footer-title { font-family: var(--font-title); font-weight: 700; letter-spacing: .16em; }
+
+/* ==========================================================================
+   Réseaux sociaux : logos officiels (Simple Icons, CC0) dans leurs couleurs
+   d'origine, noms écrits dans leur forme naturelle. Couleurs de référence :
+   WhatsApp #25D366 (texte : #128C7E), Facebook #0866FF, Instagram dégradé,
+   TikTok noir avec ses reflets cyan et rose, Threads noir, YouTube #FF0000.
+   ========================================================================== */
+.brand-icon { fill: currentColor; stroke: none; }
+.brand-whatsapp,
+.hero .btn-link .brand-whatsapp, .bg-ink .btn-link .brand-whatsapp, .bg-photo .btn-link .brand-whatsapp,
+.header-wa .brand-whatsapp { color: #25D366; }
+
+/* Dans un bouton : pastille verte officielle, logo blanc */
+.btn-primary .brand-whatsapp {
+  width: 28px; height: 28px; padding: 5px; border-radius: 50%;
+  background: #25D366; color: #fff; margin-left: -.5em;
+}
+.whatsapp-float .brand-whatsapp { color: #fff; width: 30px; height: 30px; }
+
+/* Tuiles « icône d'application » : section Réseaux et pied de page */
+.social-icon[class*="brand-tile-"], .footer-social a[class*="brand-tile-"] {
+  border: 0; border-radius: 14px; overflow: hidden;
+}
+.footer-social a[class*="brand-tile-"] { border-radius: 11px; transition: transform .25s, box-shadow .25s; }
+.footer-social a[class*="brand-tile-"]:hover { transform: translateY(-2px); box-shadow: 0 10px 22px -10px rgba(0, 0, 0, .6); }
+.social-icon[class*="brand-tile-"] .brand-icon { width: 28px; height: 28px; }
+.footer-social a[class*="brand-tile-"] .brand-icon { width: 22px; height: 22px; }
+
+.brand-tile-whatsapp, .footer-social a.brand-tile-whatsapp:hover { background: #25D366 !important; color: #fff !important; }
+.brand-tile-whatsapp .brand-whatsapp { color: #fff !important; }
+.brand-tile-instagram, .footer-social a.brand-tile-instagram:hover {
+  background: radial-gradient(circle at 30% 107%, #FDF497 0%, #FDF497 5%, #FD5949 45%, #D6249F 60%, #285AEB 90%) !important;
+  color: #fff !important;
+}
+.brand-tile-tiktok, .footer-social a.brand-tile-tiktok:hover,
+.brand-tile-threads, .footer-social a.brand-tile-threads:hover { background: #000 !important; color: #fff !important; }
+.brand-tile-tiktok .brand-icon { filter: drop-shadow(-1.2px -1.2px 0 #25F4EE) drop-shadow(1.2px 1.2px 0 #FE2C55); }
+/* Facebook : le logo officiel est le rond bleu au « f » blanc */
+.brand-tile-facebook, .footer-social a.brand-tile-facebook:hover { background: #fff !important; color: #0866FF !important; border-radius: 50% !important; }
+.social-icon.brand-tile-facebook .brand-icon { width: 52px; height: 52px; }
+.footer-social a.brand-tile-facebook .brand-icon { width: 42px; height: 42px; }
+/* YouTube : logo rouge sur fond blanc, comme l'icône de l'application */
+.brand-tile-youtube, .footer-social a.brand-tile-youtube:hover { background: #fff !important; color: #FF0000 !important; }
+.social-icon.brand-tile-youtube .brand-icon { width: 34px; height: 34px; }
+
+/* Noms des réseaux : graphie et couleur d'origine (taille « grand texte » pour rester lisible) */
+.brand-name { font-family: var(--font-body) !important; font-style: normal !important; font-weight: 700; letter-spacing: -.01em; }
+.social-text .brand-name { font-size: 1.2rem; line-height: 1.25; }
+strong.brand-name-whatsapp, .brand-name-whatsapp { color: #128C7E; }
+strong.brand-name-facebook, .brand-name-facebook { color: #0866FF; }
+strong.brand-name-instagram, .brand-name-instagram {
+  background: linear-gradient(90deg, #833AB4 0%, #C13584 40%, #E1306C 70%, #FD1D1D 100%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  align-self: flex-start;
+}
+strong.brand-name-tiktok, .brand-name-tiktok { color: #000; text-shadow: -1px -1px 0 rgba(37, 244, 238, .9), 1px 1px 0 rgba(254, 44, 85, .9); }
+strong.brand-name-threads, .brand-name-threads { color: #000; }
+strong.brand-name-youtube, .brand-name-youtube { color: #FF0000; }
+
+/* Bandeau du hero (fond bleu nuit) : WhatsApp en vert officiel, avec son logo */
+.hero-highlights strong.brand-name-whatsapp {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 1.3rem; color: #25D366;
+}
+.hero-highlights strong.brand-name-whatsapp .brand-icon { width: 24px; height: 24px; }
