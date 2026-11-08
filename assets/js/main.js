@@ -168,6 +168,70 @@ const HM_CONFIG = {
     });
   }
 
+  /* ---------- Formulaire « Évaluer mon projet » → message WhatsApp ----------
+     Aucune donnée n'est envoyée à un serveur : le formulaire compose un message
+     que la personne relit et envoie elle-même dans WhatsApp. */
+  const waForm = document.querySelector("[data-wa-form]");
+  if (waForm) {
+    // Présélection depuis l'adresse, ex. contact.html?projet=Études&destination=Turquie
+    const params = new URLSearchParams(window.location.search);
+    ["projet", "destination"].forEach(function (name) {
+      const wanted = params.get(name);
+      if (!wanted) return;
+      Array.prototype.forEach.call(waForm.querySelectorAll('input[name="' + name + '"]'), function (input) {
+        if (input.value.toLowerCase() === wanted.toLowerCase()) input.checked = true;
+      });
+    });
+
+    const setError = function (field, errorId, show) {
+      const error = document.getElementById(errorId);
+      if (error) error.hidden = !show;
+      const targets = field instanceof NodeList || Array.isArray(field) ? field : [field];
+      Array.prototype.forEach.call(targets, function (el) {
+        if (show) { el.setAttribute("aria-invalid", "true"); el.setAttribute("aria-describedby", errorId); }
+        else { el.removeAttribute("aria-invalid"); }
+      });
+    };
+
+    // Les erreurs disparaissent dès que le champ est corrigé
+    waForm.addEventListener("input", function (event) {
+      if (event.target.name === "nom" && event.target.value.trim()) setError(event.target, "f-nom-err", false);
+    });
+    waForm.addEventListener("change", function (event) {
+      if (event.target.name === "projet") setError(waForm.querySelectorAll('[name="projet"]'), "f-projet-err", false);
+    });
+
+    waForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+      const data = new FormData(waForm);
+      const value = function (name) { return String(data.get(name) || "").trim(); };
+      const nameInput = waForm.querySelector('[name="nom"]');
+      const projectInputs = waForm.querySelectorAll('[name="projet"]');
+      const missingName = !value("nom");
+      const missingProject = !value("projet");
+      setError(nameInput, "f-nom-err", missingName);
+      setError(projectInputs, "f-projet-err", missingProject);
+      if (missingName || missingProject) {
+        (missingName ? nameInput : projectInputs[0]).focus();
+        return;
+      }
+
+      const lines = ["Bonjour Horizon Monde, je souhaite être orienté(e) pour mon projet.", ""];
+      const add = function (label, v) { if (v) lines.push("• " + label + " : " + v); };
+      add("Prénom", value("nom"));
+      add("Projet", value("projet"));
+      add("Destination", value("destination"));
+      add("Période", value("periode"));
+      add("Nombre de personnes", value("personnes"));
+      add("Budget", value("budget"));
+      if (value("message")) { lines.push("", value("message")); }
+
+      const url = whatsappUrl(lines.join("\n"));
+      const opened = window.open(url, "_blank", "noopener");
+      if (!opened) window.location.href = url;
+    });
+  }
+
   /* ---------- Apparition progressive des blocs ---------- */
   const reveals = document.querySelectorAll(".reveal");
   if ("IntersectionObserver" in window) {

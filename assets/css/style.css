@@ -1821,3 +1821,110 @@ html:has(.cat-nav) { scroll-padding-top: calc(var(--header-h) + 76px); }
 @media (min-width: 860px) { .about-dest { grid-template-columns: repeat(3, 1fr); } }
 /* L'étiquette de la photo d'en-tête reste au-dessus du fondu */
 .page-hero.has-fade-bottom .page-hero-label { z-index: 3; bottom: calc(var(--fade-h) + 12px); }
+
+/* ==========================================================================
+   Page Contact : formulaire « Évaluer mon projet », canaux, suite
+   ========================================================================== */
+.page-hero-photo-contact img { object-position: 55% 40%; }
+.page-hero .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 26px; }
+
+.contact-layout { display: grid; gap: 28px; align-items: start; }
+.project-form {
+  padding: clamp(24px, 4vw, 44px); border-radius: 28px; background: var(--white);
+  box-shadow: 0 40px 80px -50px rgba(11, 31, 51, .6);
+}
+.project-form h2 { font-size: clamp(1.9rem, 3.4vw, 2.6rem); line-height: 1.1; margin-bottom: .35em; }
+.form-intro { color: var(--muted); margin-bottom: 26px; }
+.field { margin: 0 0 20px; padding: 0; border: 0; min-width: 0; }
+.field > label, .field > legend {
+  display: block; margin-bottom: 8px; padding: 0;
+  font-family: var(--font-title); font-weight: 600; font-size: .92rem; color: var(--navy);
+}
+.req { color: #B3261E; }
+.field input[type="text"], .field input[type="number"], .field select, .field textarea {
+  width: 100%; min-height: 50px; padding: 12px 16px; border-radius: 14px;
+  border: 1.5px solid #D9CFBE; background: var(--ivory); color: var(--ink);
+  font: inherit; font-size: 1rem; transition: border-color .2s, box-shadow .2s, background-color .2s;
+}
+.field textarea { min-height: 120px; resize: vertical; }
+.field input:focus, .field select:focus, .field textarea:focus {
+  outline: none; border-color: var(--gold); background: var(--white); box-shadow: 0 0 0 4px rgba(242, 165, 65, .22);
+}
+.field [aria-invalid="true"] { border-color: #B3261E; }
+.field-error { margin: 8px 0 0; color: #B3261E; font-size: .88rem; font-weight: 600; }
+.field-row { display: grid; gap: 0 16px; }
+@media (min-width: 560px) { .field-row { grid-template-columns: 1.4fr 1fr; } }
+
+.chip-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip-option { position: relative; cursor: pointer; }
+.chip-option input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.chip-option span {
+  display: inline-flex; align-items: center; min-height: 44px; padding: 10px 18px; border-radius: 999px;
+  border: 1.5px solid #D9CFBE; background: var(--ivory); color: var(--navy);
+  font-weight: 600; font-size: .94rem; transition: background-color .2s, border-color .2s, color .2s;
+}
+.chip-option:hover span { border-color: var(--gold); }
+.chip-option input:checked + span { background: var(--ink); border-color: var(--ink); color: var(--white); }
+.chip-option input:focus-visible + span { outline: 3px solid var(--gold); outline-offset: 2px; }
+.chip-option input[aria-invalid="true"] + span { border-color: #B3261E; }
+
+.form-submit { width: 100%; margin-top: 6px; min-height: 58px; font-size: 1.05rem; }
+.form-note { display: flex; align-items: center; justify-content: center; gap: 8px; margin: 14px 0 0; color: var(--muted); font-size: .86rem; text-align: center; }
+.form-note .icon { width: 16px; height: 16px; flex: 0 0 auto; }
+
+.contact-side { display: grid; gap: 16px; }
+.wa-card {
+  position: relative; display: flex; align-items: center; gap: 18px; padding: 24px; border-radius: 24px;
+  background: var(--white); text-decoration: none; color: var(--ink);
+  border: 2px solid rgba(37, 211, 102, .45); box-shadow: 0 30px 60px -44px rgba(11, 31, 51, .6);
+  transition: transform .35s cubic-bezier(.16, .84, .24, 1), box-shadow .35s;
+}
+.wa-card:hover { transform: translateY(-3px); box-shadow: 0 36px 66px -40px rgba(11, 31, 51, .65); }
+.wa-card-icon { display: grid; place-items: center; flex: 0 0 64px; height: 64px; border-radius: 18px; background: #25D366; }
+.wa-card-icon .brand-whatsapp { color: #fff; width: 36px; height: 36px; }
+.wa-card-text { display: flex; flex-direction: column; gap: 2px; color: var(--muted); font-size: .92rem; }
+.wa-card-text .brand-name { font-size: 1.35rem; }
+.wa-card-number { font-family: var(--font-title); font-weight: 700; font-size: 1.2rem; color: var(--navy); letter-spacing: .01em; }
+.wa-card-arrow { position: absolute; top: 22px; right: 20px; width: 20px; height: 20px; color: #128C7E; }
+
+.contact-block { padding: 22px 24px; border-radius: 22px; background: rgba(255, 255, 255, .7); border: 1px solid rgba(11, 31, 51, .08); }
+.contact-block h3 { font-family: var(--font-title); font-size: .78rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--navy); margin-bottom: 14px; }
+.contact-socials { list-style: none; display: grid; gap: 10px; }
+.contact-socials a { display: flex; align-items: center; gap: 14px; text-decoration: none; padding: 6px; border-radius: 14px; transition: background-color .2s; }
+.contact-socials a:hover { background: rgba(11, 31, 51, .05); }
+.contact-socials .brand-name { font-size: 1.05rem; }
+.contact-social-tile { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 12px; }
+.contact-social-tile .brand-icon { width: 24px; height: 24px; }
+.contact-socials a.brand-tile-facebook { background: transparent !important; border-radius: 14px !important; }
+.contact-socials a.brand-tile-facebook > .brand-icon { width: 44px; height: 44px; color: #0866FF; }
+.contact-place { display: flex; gap: 12px; margin: 0; color: var(--muted); font-size: .95rem; }
+.contact-place .icon { flex: 0 0 auto; width: 22px; height: 22px; color: var(--gold-text); margin-top: 2px; }
+.contact-place strong { color: var(--navy); }
+
+@media (min-width: 960px) {
+  .contact-layout { grid-template-columns: 1.35fr .9fr; gap: 40px; }
+  .contact-side { position: sticky; top: calc(var(--header-h) + 24px); }
+}
+
+/* Et ensuite ? */
+.inline-link { color: var(--navy); font-weight: 600; text-underline-offset: 4px; }
+.next-steps { list-style: none; display: grid; gap: 16px; counter-reset: none; }
+.next-steps li {
+  position: relative; padding: 26px 24px 22px; border-radius: 22px; background: rgba(255, 255, 255, .86);
+  border: 1px solid rgba(255, 255, 255, .95); box-shadow: 0 26px 54px -42px rgba(11, 31, 51, .6);
+}
+.js .next-steps .reveal { transition-delay: calc(var(--i, 0) * 100ms); }
+.next-num { position: absolute; top: 18px; right: 22px; font-family: var(--font-display); font-style: italic; font-size: 2.6rem; line-height: 1; color: rgba(224, 145, 58, .55); }
+.next-icon { display: grid; place-items: center; width: 50px; height: 50px; margin-bottom: 16px; border-radius: 50%; background: var(--ink); color: var(--gold-light); }
+.next-icon .icon { width: 22px; height: 22px; }
+.next-steps h3 { font-family: var(--font-display); font-weight: 600; font-size: 1.45rem; margin-bottom: .3em; }
+.next-steps p { color: var(--muted); margin: 0; }
+@media (min-width: 860px) { .next-steps { grid-template-columns: repeat(3, 1fr); } }
+
+/* Bandeau final, qui rejoint le pied de page */
+.contact-end-inner { display: flex; flex-direction: column; align-items: flex-start; gap: 24px; }
+.contact-end h2 { font-size: clamp(1.9rem, 3.6vw, 2.8rem); line-height: 1.1; margin: 0; max-width: 18em; }
+.contact-end h2 em { font-style: italic; font-weight: 500; color: var(--gold-light); }
+.contact-end { padding-bottom: clamp(56px, 7vw, 88px); background: linear-gradient(180deg, var(--ink), var(--navy-deep)) !important; }
+@media (min-width: 860px) { .contact-end-inner { flex-direction: row; justify-content: space-between; align-items: center; } }
+.page-hero .btn-link { color: var(--white); }

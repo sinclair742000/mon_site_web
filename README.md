@@ -25,10 +25,10 @@ Site statique (HTML, CSS et JavaScript, sans outil de compilation) : il suffit d
 | Page Services (services, TCF, engagements, questions fréquentes) | `services.html` | ✅ Validé |
 | Page Comment ça marche (parcours détaillé, qui fait quoi, à préparer) | `comment-ca-marche.html` | ✅ Validé |
 | Photos : personnes noires ; groupes mixtes pour les échanges internationaux | toutes les pages | ✅ Validé |
-| Page À propos (mission, valeurs, ancrage à Yaoundé, partenaires) | `a-propos.html` | ✅ À valider |
-| Page Contact | à créer | À faire |
+| Page À propos (mission, valeurs, ancrage à Yaoundé, partenaires) | `a-propos.html` | ✅ Validé |
+| Page Contact (formulaire « Évaluer mon projet » vers WhatsApp, canaux, suite) | `contact.html` | ✅ À valider |
 
-Le menu renvoie déjà vers les pages prévues ; les liens fonctionneront au fur et à mesure.
+Les 7 pages du menu sont en ligne ; tous les liens internes (pages et ancres) sont vérifiés.
 
 ## Structure
 
@@ -39,6 +39,7 @@ opportunites.html         Page Opportunités (études, voyages, affaires, mobili
 services.html             Page Services (services, TCF, engagements, questions fréquentes)
 comment-ca-marche.html    Page Comment ça marche (étapes, qui fait quoi, à préparer)
 a-propos.html             Page À propos (mission, valeurs, Yaoundé, partenaires)
+contact.html              Page Contact (formulaire vers WhatsApp, canaux)
 assets/css/style.css      Styles communs à toutes les pages
 assets/js/main.js         Script commun (liens WhatsApp, menu mobile, animations)
 assets/img/               Logo, emblème, favicon, image de partage
@@ -76,6 +77,7 @@ dédiée ou des photos sous licence avec autorisation des modèles reste recomma
 | `yaounde-ville-*` (rond-point « I love my country Cameroon ») | Pexels 17290974 |
 | `mission-*` (jeune femme au téléphone) | Pexels 4173233 |
 | `partenaires-*` (jeune femme et collègue, groupe mixte) | Pexels 3860937 |
+| `contact-large-*`, `contact-mobile-*` (jeune femme au téléphone) | Pexels 4173245 |
 | `turquie-*`, `turquie-large-*`, `turquie-arche-*` | Unsplash `photo-1524231757912-21f4fe3a7200` |
 | `istanbul-bosphore-*` | Unsplash `photo-1589561454226-796a8aa89b05` |
 | `mosquee-bleue-*` | Unsplash `photo-1541432901042-2d8bd64b4a9b` |
@@ -108,6 +110,11 @@ Dans `assets/js/main.js`, en haut du fichier (`HM_CONFIG`) :
 
 Tous les boutons WhatsApp ouvrent une conversation avec un message déjà rédigé
 (attribut `data-message` dans le HTML).
+
+Le formulaire de la page Contact (« Évaluer mon projet ») n'envoie rien à un serveur : il compose
+un message à partir des réponses et l'ouvre dans WhatsApp, où la personne le relit avant de
+l'envoyer. Les choix « projet » et « destination » peuvent être présélectionnés par l'adresse,
+par exemple `contact.html?projet=Études&destination=Turquie`.
 
 Les logos des réseaux sociaux (WhatsApp, Facebook, Instagram, TikTok, Threads, YouTube) sont les
 tracés officiels de [Simple Icons](https://simpleicons.org) (licence CC0), affichés dans les couleurs
