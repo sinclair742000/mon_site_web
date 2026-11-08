@@ -12,7 +12,8 @@ Site statique (HTML, CSS et JavaScript, sans outil de compilation) : il suffit d
 | Étape | Contenu | État |
 |-------|---------|------|
 | Accueil — en-tête + hero + « Quel horizon envisagez-vous ? » | `index.html` | ✅ Validé |
-| Accueil — sections suivantes (Turquie, parcours, transparence, réseaux, pied de page) | `index.html` | Version 1, à reprendre (prochaine étape) |
+| Accueil — Destinations & programmes (Turquie à la une, Chine, TCF) | `index.html` | ✅ À valider |
+| Accueil — sections suivantes (parcours, transparence, réseaux, pied de page) | `index.html` | Version 1, à reprendre une à une |
 | Pages du menu : Destinations, Opportunités, Services, Comment ça marche, À propos, Contact | à créer | À faire |
 
 Le menu renvoie déjà vers les pages prévues ; les liens fonctionneront au fur et à mesure.
@@ -42,6 +43,9 @@ des photos sous licence avec autorisation des modèles est recommandée.
 | `voyager-*`, `cappadoce-mini-*` | `photo-1530789253388-582c481c54b0` |
 | `etudier-*` | `photo-1531482615713-2afd69097998` |
 | `opportunites-*` | `photo-1473625247510-8ceb1760943f` |
+| `turquie-*` | `photo-1524231757912-21f4fe3a7200` |
+| `chine-*` | `photo-1545893835-abaa50cbe628` |
+| `tcf-*` | `photo-1541178735493-479c1a27ed24` |
 
 Pour remplacer une photo (Pillow requis : `pip install pillow`) :
 
@@ -56,7 +60,7 @@ python3 outils/optimiser_photos.py nouvelle-photo.jpg voyager --ratio 4:5 --larg
 Dans `assets/js/main.js`, en haut du fichier (`HM_CONFIG`) :
 
 - `whatsappNumber` : numéro WhatsApp Business au format international, sans `+` ni espaces
-  (ex. `2376XXXXXXXX`). Tant qu'il est vide, les boutons ouvrent WhatsApp sans destinataire.
+  (ex. `237698994839`). Tant qu'il est vide, les boutons ouvrent WhatsApp sans destinataire.
 - `social.facebook`, `social.instagram`, `social.tiktok` : adresses des pages. Un lien laissé
   vide est masqué sur le site.
 

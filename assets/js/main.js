@@ -8,7 +8,7 @@
                     Exemple pour un numéro camerounais : "2376XXXXXXXX".
    Réseaux sociaux : laisser vide ("") pour masquer le lien sur le site. */
 const HM_CONFIG = {
-  whatsappNumber: "",
+  whatsappNumber: "237698994839",
   social: {
     facebook: "",
     instagram: "",
