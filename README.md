@@ -22,8 +22,10 @@ Site statique (HTML, CSS et JavaScript, sans outil de compilation) : il suffit d
 | Page Destinations (Turquie à la une, Chine, renvoi TCF) | `destinations.html` | ✅ Validé |
 | Page Opportunités (pour qui ?, études, voyages, affaires, mobilité) — catégories mises en avant | `opportunites.html` | ✅ Validé |
 | Transitions « horizon » (fondu crépuscule) entre sections sombres et claires | toutes les pages | ✅ Validé |
-| Page Services (services, TCF, engagements, questions fréquentes) | `services.html` | ✅ À valider |
-| Pages Comment ça marche, À propos, Contact | à créer | À faire |
+| Page Services (services, TCF, engagements, questions fréquentes) | `services.html` | ✅ Validé |
+| Page Comment ça marche (parcours détaillé, qui fait quoi, à préparer) | `comment-ca-marche.html` | ✅ À valider |
+| Photos : personnes noires ; groupes mixtes pour les échanges internationaux | toutes les pages | ✅ À valider |
+| Pages À propos, Contact | à créer | À faire |
 
 Le menu renvoie déjà vers les pages prévues ; les liens fonctionneront au fur et à mesure.
 
@@ -34,6 +36,7 @@ index.html                Page d'accueil
 destinations.html         Page Destinations (Turquie, Chine, renvoi vers le TCF)
 opportunites.html         Page Opportunités (études, voyages, affaires, mobilité)
 services.html             Page Services (services, TCF, engagements, questions fréquentes)
+comment-ca-marche.html    Page Comment ça marche (étapes, qui fait quoi, à préparer)
 assets/css/style.css      Styles communs à toutes les pages
 assets/js/main.js         Script commun (liens WhatsApp, menu mobile, animations)
 assets/img/               Logo, emblème, favicon, image de partage
@@ -44,31 +47,39 @@ outils/optimiser_photos.py  Script de préparation des photos
 
 ## Photos
 
-Photos provisoires issues d'Unsplash (licence Unsplash : usage commercial gratuit, sans
-attribution obligatoire). Pour une communication publicitaire, une séance photo dédiée ou
-des photos sous licence avec autorisation des modèles est recommandée.
+Principe : les personnes photographiées sont des personnes noires (hommes, femmes, garçons,
+filles) ; là où le site montre les échanges avec des interlocuteurs étrangers (affaires,
+études à l'international), des personnes de différentes origines apparaissent ensemble.
 
-| Fichier | Photo Unsplash |
-|---------|----------------|
-| `hero-*`, `hero-mobile-*` | `photo-1589156280159-27698a70f29e` |
-| `voyager-*`, `cappadoce-mini-*` | `photo-1530789253388-582c481c54b0` |
-| `etudier-*` | `photo-1531482615713-2afd69097998` |
-| `opportunites-*`, `porte-large-*`, `porte-mobile-*` | `photo-1473625247510-8ceb1760943f` |
-| `tarmac-large-*`, `tarmac-mobile-*` | `photo-1542296332-2e4473faf563` |
-| `affaires-*` | `photo-1573164713988-8665fc963095` |
-| `departs-*` | `photo-1517400508447-f8dd518b86db` |
-| `boussole-large-*`, `boussole-mobile-*` | `photo-1484910292437-025e5d13ce87` |
-| `conseillere-*` | `photo-1611432579699-484f7990b127` |
-| `tcf-portrait-*` | `photo-1541178735493-479c1a27ed24` |
-| `turquie-*`, `turquie-large-*` | `photo-1524231757912-21f4fe3a7200` |
-| `chine-*` | `photo-1545893835-abaa50cbe628` |
-| `tcf-*` | `photo-1541178735493-479c1a27ed24` |
-| `ciel-*`, `ciel-mobile-*` | `photo-1436491865332-7a61a109cc05` |
-| `istanbul-bosphore-*` | `photo-1589561454226-796a8aa89b05` |
-| `mosquee-bleue-*` | `photo-1541432901042-2d8bd64b4a9b` |
-| `grande-muraille-*` | `photo-1508804185872-d7badad00f7d` |
-| `cite-interdite-*` | `photo-1547981609-4b6bfe67ca0b` |
-| `turquie-arche-*` | `photo-1524231757912-21f4fe3a7200` (recadrage portrait) |
+Photos provisoires issues d'Unsplash et de Pexels (licences gratuites, usage commercial
+permis, attribution non obligatoire). Pour une communication publicitaire, une séance photo
+dédiée ou des photos sous licence avec autorisation des modèles reste recommandée.
+
+| Fichier | Source |
+|---------|--------|
+| `hero-*`, `hero-mobile-*` | Unsplash `photo-1589156280159-27698a70f29e` |
+| `etudier-*` | Unsplash `photo-1531482615713-2afd69097998` |
+| `tcf-*`, `tcf-portrait-*` | Unsplash `photo-1541178735493-479c1a27ed24` |
+| `conseillere-*` | Unsplash `photo-1611432579699-484f7990b127` |
+| `voyager-*` (père et enfants, valise) | Pexels 4546012 |
+| `cappadoce-*`, `cappadoce-mini-*` (montgolfières) | Pexels 19228322 |
+| `porte-large-*`, `porte-mobile-*` (montgolfières au coucher du soleil, appel final) | Pexels 5700576 |
+| `opportunites-*` (jeune homme, téléphone et ordinateur) | Pexels 4173204 |
+| `attente-*` (jeune femme entre ses valises) | Pexels 4173237 |
+| `departs-*` (jeune homme, valise et passeport) | Pexels 4173219 |
+| `boussole-*` (mains sur une carte) | Pexels 12585887 |
+| `affaires-*` (poignée de main, partenaires internationaux) | Pexels 5668465 |
+| `etudes-groupe-*` (étudiants d'origines différentes) | Pexels 6146978 |
+| `turquie-*`, `turquie-large-*`, `turquie-arche-*` | Unsplash `photo-1524231757912-21f4fe3a7200` |
+| `istanbul-bosphore-*` | Unsplash `photo-1589561454226-796a8aa89b05` |
+| `mosquee-bleue-*` | Unsplash `photo-1541432901042-2d8bd64b4a9b` |
+| `chine-*` | Unsplash `photo-1545893835-abaa50cbe628` |
+| `grande-muraille-*` | Unsplash `photo-1508804185872-d7badad00f7d` |
+| `cite-interdite-*` | Unsplash `photo-1547981609-4b6bfe67ca0b` |
+| `ciel-*` | Unsplash `photo-1436491865332-7a61a109cc05` |
+| `tarmac-*` | Unsplash `photo-1542296332-2e4473faf563` |
+
+Liens Pexels : `https://www.pexels.com/photo/<numéro>/`.
 
 Pour remplacer une photo (Pillow requis : `pip install pillow`) :
 

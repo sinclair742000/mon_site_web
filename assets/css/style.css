@@ -1568,7 +1568,7 @@ html:has(.cat-nav) { scroll-padding-top: calc(var(--header-h) + 76px); }
 /* ==========================================================================
    Page Services : services, TCF, engagements, questions fréquentes
    ========================================================================== */
-.page-hero-photo-compass img { object-position: 45% 60%; }
+.page-hero-photo-compass img { object-position: 55% 50%; }
 
 /* Services */
 .service-grid { display: grid; gap: 16px; }
@@ -1666,4 +1666,105 @@ html:has(.cat-nav) { scroll-padding-top: calc(var(--header-h) + 76px); }
 @media (min-width: 960px) {
   .faq-wrap { grid-template-columns: .8fr 1.2fr; gap: clamp(56px, 7vw, 104px); align-items: start; }
   .faq-head { position: sticky; top: calc(var(--header-h) + 110px); }
+}
+
+/* ==========================================================================
+   Page Comment ça marche : étapes détaillées, qui fait quoi, à préparer
+   ========================================================================== */
+.page-hero-photo-wait img { object-position: 58% 55%; }
+.step-tiles .cat-tile { gap: 10px; }
+.step-tile-num { font-family: var(--font-display); font-style: italic; font-weight: 500; font-size: 2.6rem; line-height: 1; color: var(--gold-text); }
+.step-tiles .cat-name { font-size: clamp(1.15rem, 1.8vw, 1.4rem); }
+.cat-nav-num { font-family: var(--font-display); font-style: italic; font-weight: 600; color: var(--gold-text); }
+.cat-nav a[aria-current="true"] .cat-nav-num { color: var(--ink); }
+
+/* Fil des étapes */
+.step-track { list-style: none; position: relative; display: grid; gap: 28px; }
+.step-track::before {
+  content: ""; position: absolute; top: 30px; bottom: 30px; left: 29px; width: 2px;
+  background: linear-gradient(180deg, var(--amber), rgba(224, 145, 58, .25));
+}
+.step-row { position: relative; display: grid; grid-template-columns: 60px 1fr; gap: 18px; scroll-margin-top: calc(var(--header-h) + 90px); }
+.step-marker { position: relative; z-index: 1; }
+.step-big { display: none; }
+.step-dot {
+  display: grid; place-items: center; width: 60px; height: 60px; border-radius: 50%;
+  background: var(--ink); color: var(--gold-light); box-shadow: 0 0 0 6px var(--stone);
+}
+.step-dot .icon { width: 26px; height: 26px; }
+.step-card {
+  padding: 26px 22px 22px; border-radius: 24px; background: rgba(255, 255, 255, .88);
+  border: 1px solid rgba(255, 255, 255, .95); box-shadow: 0 30px 60px -46px rgba(11, 31, 51, .6);
+}
+.step-card h3 { font-family: var(--font-display); font-weight: 600; font-size: clamp(1.7rem, 3vw, 2.4rem); letter-spacing: -.015em; margin-bottom: .25em; }
+.step-tagline { font-family: var(--font-display); font-style: italic; font-size: 1.15rem; color: var(--gold-text-strong); margin-bottom: 12px; }
+.step-lead { color: var(--muted); margin-bottom: 20px; max-width: 46em; }
+.step-cols { display: grid; gap: 12px; }
+.step-col { padding: 16px 18px; border-radius: 16px; background: rgba(11, 31, 51, .04); border: 1px solid rgba(11, 31, 51, .08); }
+.step-col-us { background: rgba(242, 165, 65, .1); border-color: rgba(224, 145, 58, .3); }
+.step-col h4 {
+  display: flex; align-items: center; gap: 8px; margin-bottom: 10px;
+  font-family: var(--font-title); font-size: .78rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--navy);
+}
+.step-col h4 .icon { width: 16px; height: 16px; color: var(--gold-text); }
+.step-col ul { list-style: none; display: grid; gap: 8px; }
+.step-col li { display: flex; gap: 9px; font-size: .94rem; color: var(--ink); line-height: 1.5; }
+.step-col li .icon { flex: 0 0 auto; width: 18px; height: 18px; padding: 3px; margin-top: 2px; border-radius: 50%; background: var(--ink); color: var(--gold-light); stroke-width: 3; }
+.step-col-us li .icon { background: var(--amber); color: var(--ink); }
+
+@media (min-width: 760px) { .step-cols { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 960px) {
+  .step-track { gap: 40px; }
+  .step-track::before { left: 89px; }
+  .step-row { grid-template-columns: 180px 1fr; gap: 36px; align-items: start; }
+  .step-marker { display: flex; align-items: center; gap: 14px; padding-top: 20px; }
+  .step-big {
+    display: block; width: 60px; text-align: right;
+    font-family: var(--font-display); font-style: italic; font-weight: 500; font-size: 3.4rem; line-height: 1; color: rgba(224, 145, 58, .7);
+  }
+  .step-card { padding: 36px 40px 32px; }
+}
+
+/* Qui fait quoi : tableau */
+.roles-table-wrap { overflow-x: auto; border-radius: 24px; background: rgba(255, 255, 255, .97); box-shadow: 0 40px 80px -40px rgba(0, 0, 0, .7); }
+.roles-table { width: 100%; border-collapse: collapse; min-width: 520px; }
+.roles-table th, .roles-table td { padding: 16px 20px; text-align: left; border-bottom: 1px solid rgba(11, 31, 51, .08); }
+.roles-table thead th {
+  font-family: var(--font-title); font-size: .76rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--navy); background: rgba(242, 165, 65, .14);
+}
+.roles-table thead th:nth-child(n+2), .roles-table td { text-align: center; width: 22%; }
+.roles-table tbody th { font-weight: 500; color: var(--ink); font-size: .96rem; }
+.roles-table tbody tr:last-child th, .roles-table tbody tr:last-child td { border-bottom: 0; }
+.roles-table td.on .icon { width: 28px; height: 28px; padding: 6px; border-radius: 50%; background: var(--amber); color: var(--ink); stroke-width: 3; display: inline-block; vertical-align: middle; }
+.roles-table td.off span[aria-hidden], .roles-table td.off > span:first-child { color: rgba(11, 31, 51, .3); font-weight: 700; }
+.roles-table tbody tr:hover { background: rgba(242, 165, 65, .06); }
+
+/* À préparer */
+.prep-grid { list-style: none; display: grid; gap: 14px; margin-bottom: 32px; }
+.prep-item {
+  display: grid; grid-template-columns: 52px 1fr; gap: 16px; padding: 22px 20px; border-radius: 20px;
+  background: var(--white); box-shadow: 0 24px 50px -42px rgba(11, 31, 51, .6);
+}
+.js .prep-item.reveal { transition-delay: calc(var(--i, 0) * 80ms); }
+.prep-icon { display: grid; place-items: center; width: 52px; height: 52px; border-radius: 16px; background: linear-gradient(135deg, #FBE3C0, #F4C27F); color: var(--ink); }
+.prep-icon .icon { width: 24px; height: 24px; }
+.prep-item h3 { font-family: var(--font-title); font-size: 1.05rem; margin: 2px 0 .3em; }
+.prep-item p { color: var(--muted); font-size: .94rem; margin: 0; }
+.prep-cta {
+  display: flex; flex-direction: column; align-items: flex-start; gap: 18px; padding: 26px 24px; border-radius: 24px;
+  background: var(--ink); color: var(--white);
+  box-shadow: 0 40px 80px -46px rgba(11, 31, 51, .8);
+}
+.prep-cta p { margin: 0; font-family: var(--font-display); font-size: clamp(1.35rem, 2.4vw, 1.8rem); line-height: 1.25; }
+@media (min-width: 640px) { .prep-grid { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1024px) { .prep-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 860px) { .prep-cta { flex-direction: row; justify-content: space-between; align-items: center; padding: 30px 36px; } }
+.roles-table-wrap { position: relative; }   /* contient les textes masqués (lecteurs d'écran) */
+@media (max-width: 599px) {
+  .roles-table { min-width: 0; }
+  .roles-table th, .roles-table td { padding: 12px 10px; }
+  .roles-table thead th { font-size: .62rem; letter-spacing: .08em; }
+  .roles-table tbody th { font-size: .88rem; }
+  .roles-table td.on .icon { width: 24px; height: 24px; padding: 5px; }
 }
