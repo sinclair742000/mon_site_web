@@ -1768,3 +1768,56 @@ html:has(.cat-nav) { scroll-padding-top: calc(var(--header-h) + 76px); }
   .roles-table tbody th { font-size: .88rem; }
   .roles-table td.on .icon { width: 24px; height: 24px; padding: 5px; }
 }
+
+/* ==========================================================================
+   Page À propos
+   ========================================================================== */
+.page-hero-photo-yaounde img { object-position: 50% 55%; }
+.about-pills { list-style: none; display: flex; flex-wrap: wrap; gap: 10px; }
+.about-pills li {
+  display: inline-flex; align-items: center; gap: 9px; padding: 10px 16px; border-radius: 999px;
+  background: rgba(255, 255, 255, .1); border: 1px solid rgba(255, 255, 255, .22);
+  backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+  color: var(--white); font-size: .9rem; font-weight: 600;
+}
+.about-pills .icon { width: 18px; height: 18px; color: var(--gold-light); }
+.about-pills .brand-whatsapp { color: #25D366; }
+
+.chapter-body h2 { font-size: clamp(2.1rem, 4.2vw, 3.3rem); line-height: 1.08; margin-bottom: .5em; }
+.chapter-body h2 em { font-style: italic; font-weight: 500; color: var(--gold-text-strong); }
+.bg-ink .chapter-body h2 em { color: var(--gold-light); }
+.about-quote {
+  position: relative; margin: 26px 0 0; padding: 22px 24px 22px 28px; border-radius: 0 20px 20px 0;
+  border-left: 4px solid var(--amber); background: rgba(242, 165, 65, .1);
+}
+.about-quote p { margin: 0; font-family: var(--font-display); font-style: italic; font-size: clamp(1.25rem, 2.2vw, 1.55rem); line-height: 1.4; color: var(--navy); }
+
+.value-grid { list-style: none; display: grid; gap: 16px; }
+.value-card {
+  padding: 28px 24px 24px; border-radius: 22px; background: rgba(255, 255, 255, .86);
+  border: 1px solid rgba(255, 255, 255, .95); box-shadow: 0 26px 54px -42px rgba(11, 31, 51, .6);
+}
+.js .value-card.reveal, .js .about-dest .reveal { transition-delay: calc(var(--i, 0) * 90ms); }
+.value-icon { display: grid; place-items: center; width: 54px; height: 54px; margin-bottom: 18px; border-radius: 50%; background: var(--ink); color: var(--gold-light); }
+.value-icon .icon { width: 24px; height: 24px; }
+.value-card h3 { font-family: var(--font-display); font-weight: 600; font-size: 1.7rem; margin-bottom: .3em; }
+.value-card p { color: var(--muted); margin: 0; }
+@media (min-width: 640px) { .value-grid { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1100px) { .value-grid { grid-template-columns: repeat(4, 1fr); } }
+
+.about-dest { list-style: none; display: grid; gap: 16px; }
+.about-dest-card {
+  position: relative; display: flex; flex-direction: column; gap: 8px; min-height: 100%;
+  padding: 30px 26px 26px; border-radius: 22px; overflow: hidden; text-decoration: none;
+  background: var(--white); box-shadow: 0 26px 54px -42px rgba(11, 31, 51, .6);
+  transition: transform .4s cubic-bezier(.16, .84, .24, 1), box-shadow .4s;
+}
+.about-dest-card::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 6px; background: var(--accent-stripe); }
+.about-dest-card:hover { transform: translateY(-4px); box-shadow: 0 34px 64px -40px rgba(11, 31, 51, .65); }
+.about-dest-name { font-family: var(--font-display); font-weight: 600; font-size: 2.2rem; line-height: 1.05; color: var(--navy); }
+.about-dest-desc { color: var(--muted); font-size: .96rem; padding-right: 28px; }
+.about-dest-arrow { position: absolute; right: 22px; bottom: 24px; width: 22px; height: 22px; color: var(--accent-text); transition: transform .3s; }
+.about-dest-card:hover .about-dest-arrow { transform: translateX(4px); }
+@media (min-width: 860px) { .about-dest { grid-template-columns: repeat(3, 1fr); } }
+/* L'étiquette de la photo d'en-tête reste au-dessus du fondu */
+.page-hero.has-fade-bottom .page-hero-label { z-index: 3; bottom: calc(var(--fade-h) + 12px); }

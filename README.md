@@ -23,9 +23,10 @@ Site statique (HTML, CSS et JavaScript, sans outil de compilation) : il suffit d
 | Page Opportunités (pour qui ?, études, voyages, affaires, mobilité) — catégories mises en avant | `opportunites.html` | ✅ Validé |
 | Transitions « horizon » (fondu crépuscule) entre sections sombres et claires | toutes les pages | ✅ Validé |
 | Page Services (services, TCF, engagements, questions fréquentes) | `services.html` | ✅ Validé |
-| Page Comment ça marche (parcours détaillé, qui fait quoi, à préparer) | `comment-ca-marche.html` | ✅ À valider |
-| Photos : personnes noires ; groupes mixtes pour les échanges internationaux | toutes les pages | ✅ À valider |
-| Pages À propos, Contact | à créer | À faire |
+| Page Comment ça marche (parcours détaillé, qui fait quoi, à préparer) | `comment-ca-marche.html` | ✅ Validé |
+| Photos : personnes noires ; groupes mixtes pour les échanges internationaux | toutes les pages | ✅ Validé |
+| Page À propos (mission, valeurs, ancrage à Yaoundé, partenaires) | `a-propos.html` | ✅ À valider |
+| Page Contact | à créer | À faire |
 
 Le menu renvoie déjà vers les pages prévues ; les liens fonctionneront au fur et à mesure.
 
@@ -37,6 +38,7 @@ destinations.html         Page Destinations (Turquie, Chine, renvoi vers le TCF)
 opportunites.html         Page Opportunités (études, voyages, affaires, mobilité)
 services.html             Page Services (services, TCF, engagements, questions fréquentes)
 comment-ca-marche.html    Page Comment ça marche (étapes, qui fait quoi, à préparer)
+a-propos.html             Page À propos (mission, valeurs, Yaoundé, partenaires)
 assets/css/style.css      Styles communs à toutes les pages
 assets/js/main.js         Script commun (liens WhatsApp, menu mobile, animations)
 assets/img/               Logo, emblème, favicon, image de partage
@@ -70,6 +72,10 @@ dédiée ou des photos sous licence avec autorisation des modèles reste recomma
 | `boussole-*` (mains sur une carte) | Pexels 12585887 |
 | `affaires-*` (poignée de main, partenaires internationaux) | Pexels 5668465 |
 | `etudes-groupe-*` (étudiants d'origines différentes) | Pexels 6146978 |
+| `yaounde-large-*`, `yaounde-mobile-*` (panorama de Yaoundé) | Pexels 17290955 |
+| `yaounde-ville-*` (rond-point « I love my country Cameroon ») | Pexels 17290974 |
+| `mission-*` (jeune femme au téléphone) | Pexels 4173233 |
+| `partenaires-*` (jeune femme et collègue, groupe mixte) | Pexels 3860937 |
 | `turquie-*`, `turquie-large-*`, `turquie-arche-*` | Unsplash `photo-1524231757912-21f4fe3a7200` |
 | `istanbul-bosphore-*` | Unsplash `photo-1589561454226-796a8aa89b05` |
 | `mosquee-bleue-*` | Unsplash `photo-1541432901042-2d8bd64b4a9b` |
