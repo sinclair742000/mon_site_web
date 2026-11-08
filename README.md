@@ -13,8 +13,9 @@ Site statique (HTML, CSS et JavaScript, sans outil de compilation) : il suffit d
 |-------|---------|------|
 | Accueil — en-tête + hero + « Quel horizon envisagez-vous ? » | `index.html` | ✅ Validé |
 | Accueil — Destinations & programmes (Turquie à la une, Chine, TCF) | `index.html` | ✅ Validé |
-| Accueil — Comment ça marche (frise en 4 étapes) | `index.html` | ✅ À valider |
-| Accueil — sections suivantes (transparence, réseaux, appel final, pied de page) | `index.html` | Version 1, à reprendre une à une |
+| Accueil — Comment ça marche (frise en 4 étapes) | `index.html` | ✅ Validé |
+| Accueil — Transparence (Horizon Monde / partenaires) + harmonisation des fonds | `index.html` | ✅ À valider |
+| Accueil — sections suivantes (réseaux, appel final, pied de page) | `index.html` | Version 1, à reprendre une à une |
 | Pages du menu : Destinations, Opportunités, Services, Comment ça marche, À propos, Contact | à créer | À faire |
 
 Le menu renvoie déjà vers les pages prévues ; les liens fonctionneront au fur et à mesure.

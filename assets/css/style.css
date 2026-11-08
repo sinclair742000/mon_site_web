@@ -13,6 +13,8 @@
   --gold-text: #94661F;          /* or lisible sur fond clair (contraste AA) */
   --gold-text-strong: #8A5E1A;   /* or lisible sur le bleu brume */
   --mist: #E6EDF5;               /* bleu brume */
+  --sky: #F0F4F9;                /* ciel clair (en-tête, haut du hero) */
+  --sky-deep: #E3EBF4;           /* bas du hero */
   --cream: #FBF8F2;
   --sand: #F1E7D6;               /* sable doré */
   --white: #FFFFFF;
@@ -128,7 +130,7 @@ ul, ol { margin: 0; padding: 0; }
 /* ---------- En-tête ---------- */
 .site-header {
   position: sticky; top: 0; z-index: 100;
-  background: rgba(255, 255, 255, .94);
+  background: rgba(240, 244, 249, .94);
   backdrop-filter: saturate(1.4) blur(12px);
   -webkit-backdrop-filter: saturate(1.4) blur(12px);
   border-bottom: 1px solid transparent;
@@ -366,7 +368,7 @@ ul, ol { margin: 0; padding: 0; }
     justify-content: center;
     min-height: clamp(640px, calc(100svh - var(--header-h)), 900px);
     padding: 32px 0 88px;
-    background: var(--white); color: var(--ink);
+    background: linear-gradient(180deg, var(--sky) 0%, var(--sky-deep) 100%); color: var(--ink);
   }
   .hero-inner {
     position: relative;
@@ -397,7 +399,7 @@ ul, ol { margin: 0; padding: 0; }
   .hero-picture img { object-position: 55% 38%; }
   .hero-frame::after { background: linear-gradient(180deg, rgba(10, 34, 64, 0) 62%, rgba(10, 34, 64, .28) 100%); }
 
-  .hero .eyebrow { color: var(--gold-text); font-size: .76rem; letter-spacing: .18em; gap: 10px; margin-bottom: 22px; }
+  .hero .eyebrow { color: var(--gold-text-strong); font-size: .76rem; letter-spacing: .18em; gap: 10px; margin-bottom: 22px; }
   .hero h1 { color: var(--navy); font-size: clamp(2.7rem, 4vw, 3.9rem); margin-bottom: .4em; }
   .hero h1 em::after { background: var(--gold); }
   .hero-lead { color: var(--muted); font-size: 1.14rem; line-height: 1.7; max-width: 31em; margin-bottom: 38px; }
@@ -520,9 +522,10 @@ ul, ol { margin: 0; padding: 0; }
 
 /* ---------- Sections ---------- */
 .section { padding: clamp(64px, 9vw, 110px) 0; }
-.section-cream { background: var(--cream); }
-.section-navy { background: var(--navy); color: var(--on-navy); }
-.section-navy h2, .section-navy h3 { color: var(--white); }
+/* Teintes de fond : la page alterne bleu brume (froid) et sable doré (chaud) */
+.tone-mist { background: var(--mist); }
+.tone-sand { background: var(--sand); }
+.tone-mist .eyebrow, .tone-sand .eyebrow { color: var(--gold-text-strong); }   /* contraste AA sur ces fonds */
 
 .section-head { max-width: 720px; margin: 0 auto 48px; text-align: center; }
 .section-head p:last-child { color: var(--muted); font-size: 1.05rem; }
@@ -534,12 +537,8 @@ ul, ol { margin: 0; padding: 0; }
   color: var(--gold-text); margin-bottom: 14px;
 }
 .eyebrow::before { content: ""; width: 22px; height: 2px; background: currentColor; border-radius: 2px; }
-.eyebrow-light { color: var(--gold-light); }
 
 /* ---------- Destinations & programmes ---------- */
-/* Fond bleu brume : les cartes blanches ressortent sans assombrir la page */
-.dest-section { background: var(--mist); }
-.dest-section .eyebrow { color: var(--gold-text-strong); }   /* or plus soutenu : contraste AA sur le bleu brume */
 .dest-section .dest-feature,
 .dest-section .dest-card { border-color: transparent; box-shadow: 0 34px 70px -48px rgba(14, 43, 77, .45); }
 
@@ -638,9 +637,6 @@ ul, ol { margin: 0; padding: 0; }
 }
 
 /* ---------- Comment ça marche ---------- */
-/* Fond sable doré : alterne avec le bleu brume de la section Destinations */
-.process { background: var(--sand); }
-.process .eyebrow { color: var(--gold-text-strong); }   /* contraste AA sur le sable */
 .process .timeline::before { background: rgba(14, 43, 77, .14); }
 .process .timeline-num { border-color: rgba(14, 43, 77, .16); }
 .process-inner { display: grid; gap: 44px; }
@@ -681,27 +677,59 @@ ul, ol { margin: 0; padding: 0; }
   .timeline-step { gap: 28px; padding-bottom: 52px; }
 }
 
-/* Transparence */
-.transparency { display: grid; grid-template-columns: 1fr 1.2fr; gap: 56px; align-items: center; }
-.transparency-intro p:last-child { font-size: 1.05rem; }
-.roles { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-.role {
-  padding: 26px; border-radius: var(--radius-lg);
-  background: rgba(255, 255, 255, .06); border: 1px solid rgba(255, 255, 255, .14);
+/* ---------- Transparence ---------- */
+/* Seule section sombre de la page : bleu nuit du logo, halo bleu et touche dorée */
+.trust {
+  color: var(--on-navy);
+  background:
+    radial-gradient(900px 520px at 88% -5%, rgba(35, 84, 140, .55), transparent 62%),
+    radial-gradient(760px 420px at -5% 105%, rgba(194, 141, 58, .14), transparent 60%),
+    var(--navy);
 }
-.role-tag {
-  display: inline-block; padding: 6px 14px; border-radius: 999px;
-  background: var(--white); color: var(--navy); font-size: .95rem;
+.trust .eyebrow { color: var(--gold-light); }
+.trust .split-head h2 { color: var(--white); }
+.trust .split-head > p { color: var(--on-navy); }
+
+.trust-roles { display: grid; gap: 14px; justify-items: center; }
+.trust-role {
+  width: 100%; padding: 28px 24px 22px; border-radius: 24px;
+  background: rgba(255, 255, 255, .05); border: 1px solid rgba(255, 255, 255, .12);
 }
-.role-tag-gold { background: var(--gold-light); }
-.checklist { list-style: none; display: grid; gap: 10px; }
-.checklist li { position: relative; padding-left: 30px; }
-.checklist li::before {
-  content: ""; position: absolute; left: 0; top: .32em;
-  width: 18px; height: 18px; border-radius: 50%;
-  background: var(--gold-light)
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230E2B4D' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E")
-    center / 12px no-repeat;
+.trust-role-partner { border-color: rgba(232, 192, 99, .32); }
+.js .trust-role.reveal { transition-delay: calc(var(--i, 0) * 140ms); }
+.trust-label {
+  display: inline-flex; align-items: center; gap: 8px; margin-bottom: 14px;
+  font-family: var(--font-title); font-weight: 600; font-size: .74rem;
+  letter-spacing: .16em; text-transform: uppercase; color: var(--white);
+}
+.trust-label::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--gold-light); }
+.trust-role-partner .trust-label { color: var(--gold-light); }
+.trust-role h3 {
+  color: var(--white); margin-bottom: 14px;
+  font-family: var(--font-serif); font-style: italic; font-weight: 500;
+  font-size: clamp(1.6rem, 2.6vw, 2rem); letter-spacing: 0;
+}
+.trust-list { list-style: none; }
+.trust-list li {
+  position: relative; padding: 12px 0 12px 26px;
+  border-top: 1px solid rgba(255, 255, 255, .1); color: var(--on-navy);
+}
+.trust-list li::before {
+  content: ""; position: absolute; left: 0; top: calc(12px + .825em); width: 14px; height: 2px; margin-top: -1px; background: var(--gold-light);
+}
+
+/* Passage de relais entre les deux rôles */
+.trust-handoff {
+  display: grid; place-items: center; width: 52px; height: 52px; border-radius: 50%;
+  border: 1px solid rgba(232, 192, 99, .55); color: var(--gold-light);
+  transform: rotate(90deg);
+}
+.trust-handoff .icon { width: 22px; height: 22px; }
+
+@media (min-width: 860px) {
+  .trust-roles { grid-template-columns: 1fr auto 1fr; gap: 28px; align-items: stretch; }
+  .trust-handoff { align-self: center; transform: none; }
+  .trust-role { padding: 36px 36px 26px; }
 }
 
 /* Réseaux */
@@ -787,7 +815,7 @@ ul, ol { margin: 0; padding: 0; }
 @media (max-width: 960px) {
   :root { --header-h: 68px; }
 
-  .transparency, .follow { grid-template-columns: 1fr; gap: 36px; }
+  .follow { grid-template-columns: 1fr; gap: 36px; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .footer-brand { grid-column: 1 / -1; }
 }
@@ -798,7 +826,7 @@ ul, ol { margin: 0; padding: 0; }
   .brand-top { font-size: 1.08rem; }
   .brand-bottom { font-size: .64rem; }
 
-  .roles, .social-buttons { grid-template-columns: 1fr; }
+  .social-buttons { grid-template-columns: 1fr; }
   .cta-actions, .cta-actions .btn { width: 100%; }
   .footer-grid { grid-template-columns: 1fr; }
   .whatsapp-float { right: 14px; bottom: 14px; width: 54px; height: 54px; }
