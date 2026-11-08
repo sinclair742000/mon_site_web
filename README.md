@@ -18,7 +18,7 @@ Site statique (HTML, CSS et JavaScript, sans outil de compilation) : il suffit d
 | Accueil — Réseaux (WhatsApp, Facebook, Instagram, TikTok) | `index.html` | ✅ Validé |
 | Accueil — appel final (arche) et nouveau pied de page | `index.html` | ✅ Validé |
 | Accueil — fonds en dégradés « le ciel au fil de la journée » (globe, ciel, lever et coucher de soleil) | `index.html` | ✅ Validé |
-| Page Destinations (Turquie à la une, Chine) | `destinations.html` | En cours |
+| Page Destinations (Turquie à la une, Chine, renvoi TCF) | `destinations.html` | ✅ À valider |
 | Pages Opportunités, Services (dont TCF), Comment ça marche, À propos, Contact | à créer | À faire |
 
 Le menu renvoie déjà vers les pages prévues ; les liens fonctionneront au fur et à mesure.
@@ -27,6 +27,7 @@ Le menu renvoie déjà vers les pages prévues ; les liens fonctionneront au fur
 
 ```
 index.html                Page d'accueil
+destinations.html         Page Destinations (Turquie, Chine, renvoi vers le TCF)
 assets/css/style.css      Styles communs à toutes les pages
 assets/js/main.js         Script commun (liens WhatsApp, menu mobile, animations)
 assets/img/               Logo, emblème, favicon, image de partage
@@ -51,6 +52,11 @@ des photos sous licence avec autorisation des modèles est recommandée.
 | `chine-*` | `photo-1545893835-abaa50cbe628` |
 | `tcf-*` | `photo-1541178735493-479c1a27ed24` |
 | `ciel-*`, `ciel-mobile-*` | `photo-1436491865332-7a61a109cc05` |
+| `istanbul-bosphore-*` | `photo-1589561454226-796a8aa89b05` |
+| `mosquee-bleue-*` | `photo-1541432901042-2d8bd64b4a9b` |
+| `grande-muraille-*` | `photo-1508804185872-d7badad00f7d` |
+| `cite-interdite-*` | `photo-1547981609-4b6bfe67ca0b` |
+| `turquie-arche-*` | `photo-1524231757912-21f4fe3a7200` (recadrage portrait) |
 
 Pour remplacer une photo (Pillow requis : `pip install pillow`) :
 
