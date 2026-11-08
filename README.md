@@ -15,8 +15,9 @@ Site statique (HTML, CSS et JavaScript, sans outil de compilation) : il suffit d
 | Accueil — Destinations & programmes (Turquie à la une, Chine, TCF) | `index.html` | ✅ Validé |
 | Accueil — Comment ça marche (frise en 4 étapes) | `index.html` | ✅ Validé |
 | Accueil — Transparence (Horizon Monde / partenaires) + harmonisation des fonds | `index.html` | ✅ Validé |
-| Accueil — Réseaux (WhatsApp, Facebook, Instagram, TikTok) | `index.html` | ✅ À valider |
-| Accueil — appel final et pied de page | `index.html` | Version 1, à reprendre |
+| Accueil — Réseaux (WhatsApp, Facebook, Instagram, TikTok) | `index.html` | ✅ Validé |
+| Accueil — appel final (arche) et nouveau pied de page | `index.html` | ✅ À valider |
+| Accueil — choix des fonds de section | `index.html` | En cours de révision |
 | Pages du menu : Destinations, Opportunités, Services, Comment ça marche, À propos, Contact | à créer | À faire |
 
 Le menu renvoie déjà vers les pages prévues ; les liens fonctionneront au fur et à mesure.
@@ -66,7 +67,8 @@ Dans `assets/js/main.js`, en haut du fichier (`HM_CONFIG`) :
   (ex. `237698994839`). Tant qu'il est vide, les boutons ouvrent WhatsApp sans destinataire.
 - `social.facebook`, `social.instagram`, `social.tiktok` : adresses des pages. Un lien laissé
   vide est masqué sur le site. Facebook, Instagram (@horizon_monde) et TikTok
-  (@horizon_monde) sont renseignés.
+  (@horizon_monde) sont renseignés. Des emplacements `threads` et `youtube` sont prévus :
+  il suffit d'y mettre l'adresse du compte pour qu'il apparaisse (section Réseaux et pied de page).
 
 Tous les boutons WhatsApp ouvrent une conversation avec un message déjà rédigé
 (attribut `data-message` dans le HTML).

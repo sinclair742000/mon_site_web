@@ -13,6 +13,8 @@ const HM_CONFIG = {
     facebook: "https://www.facebook.com/share/19ufTChZAv/",
     instagram: "https://www.instagram.com/horizon_monde/",
     tiktok: "https://www.tiktok.com/@horizon_monde",
+    threads: "",   // ex. "https://www.threads.net/@horizon_monde"
+    youtube: "",   // ex. "https://www.youtube.com/@horizon_monde"
   },
 };
 
