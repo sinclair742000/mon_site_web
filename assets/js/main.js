@@ -143,6 +143,31 @@ const HM_CONFIG = {
     paint();
   }
 
+  /* ---------- Barre des catégories (page Opportunités) ---------- */
+  const catNav = document.querySelector("[data-cat-nav]");
+  if (catNav && "IntersectionObserver" in window) {
+    const links = Array.prototype.slice.call(catNav.querySelectorAll('a[href^="#"]'));
+    const top = document.querySelector(".page-hero");
+    const end = document.querySelector(".closing");
+    let topVisible = true, endVisible = false;
+    const toggleNav = function () { catNav.classList.toggle("is-visible", !topVisible && !endVisible); };
+    if (top) new IntersectionObserver(function (e) { topVisible = e[0].isIntersecting; toggleNav(); }).observe(top);
+    if (end) new IntersectionObserver(function (e) { endVisible = e[0].isIntersecting; toggleNav(); }).observe(end);
+    const spy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        links.forEach(function (a) {
+          if (a.getAttribute("href") === "#" + entry.target.id) a.setAttribute("aria-current", "true");
+          else a.removeAttribute("aria-current");
+        });
+      });
+    }, { rootMargin: "-40% 0px -55% 0px" });
+    links.forEach(function (a) {
+      const target = document.querySelector(a.getAttribute("href"));
+      if (target) spy.observe(target);
+    });
+  }
+
   /* ---------- Apparition progressive des blocs ---------- */
   const reveals = document.querySelectorAll(".reveal");
   if ("IntersectionObserver" in window) {

@@ -20,7 +20,8 @@ Site statique (HTML, CSS et JavaScript, sans outil de compilation) : il suffit d
 | Accueil — fonds en dégradés « le ciel au fil de la journée » (globe, ciel, lever et coucher de soleil) | `index.html` | ✅ Validé |
 | Nouvelle direction « Éditorial immersif » (bleu nuit, ivoire, pierre, accent ambre, titres Playfair Display) + logos officiels des réseaux | accueil + Destinations | ✅ Validé |
 | Page Destinations (Turquie à la une, Chine, renvoi TCF) | `destinations.html` | ✅ Validé |
-| Page Opportunités (pour qui ?, études, voyages, affaires, mobilité) | `opportunites.html` | ✅ À valider |
+| Page Opportunités (pour qui ?, études, voyages, affaires, mobilité) — catégories mises en avant | `opportunites.html` | ✅ À valider |
+| Transitions « horizon » (fondu crépuscule) entre sections sombres et claires | toutes les pages | ✅ À valider |
 | Pages Services (dont TCF), Comment ça marche, À propos, Contact | à créer | À faire |
 
 Le menu renvoie déjà vers les pages prévues ; les liens fonctionneront au fur et à mesure.

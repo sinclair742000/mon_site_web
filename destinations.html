@@ -63,7 +63,7 @@
   <main id="contenu">
 
     <!-- ============ EN-TÊTE DE PAGE ============ -->
-    <section class="page-hero" aria-labelledby="page-titre">
+    <section class="page-hero has-fade-bottom" aria-labelledby="page-titre">
       <div class="page-hero-photo">
         <picture>
           <source media="(min-width: 768px)" type="image/avif" sizes="64vw"
@@ -97,6 +97,7 @@
           </nav>
         </div>
       </div>
+      <div class="fade-edge fade-edge-bottom" style="--fade-color: var(--ivory)" aria-hidden="true"></div>
     </section>
 
     <!-- ============ TURQUIE ============ -->
@@ -222,7 +223,9 @@
     </section>
 
     <!-- ============ CHINE ============ -->
-    <section class="section country bg-ink theme-chine" id="chine" aria-labelledby="chine-titre">
+    <section class="section country bg-ink theme-chine has-fade-top has-fade-bottom" id="chine" aria-labelledby="chine-titre">
+      <div class="fade-edge fade-edge-top" style="--fade-color: var(--ivory)" aria-hidden="true"></div>
+      <div class="fade-edge fade-edge-bottom" style="--fade-color: var(--stone)" aria-hidden="true"></div>
       <div class="container">
         <header class="country-head">
           <div>
@@ -370,7 +373,8 @@
     </section>
 
     <!-- ============ APPEL FINAL ============ -->
-    <section class="section bg-photo closing" aria-labelledby="cta-titre">
+    <section class="section bg-photo closing has-fade-top" aria-labelledby="cta-titre">
+      <div class="fade-edge fade-edge-top" style="--fade-color: var(--stone)" aria-hidden="true"></div>
       <picture class="closing-bg">
         <source media="(min-width: 768px)" type="image/avif" sizes="100vw"
           srcset="assets/img/photos/porte-large-1280.avif 1280w, assets/img/photos/porte-large-2000.avif 2000w">

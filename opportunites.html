@@ -63,7 +63,7 @@
   <main id="contenu">
 
     <!-- ============ EN-TÊTE DE PAGE ============ -->
-    <section class="page-hero" aria-labelledby="page-titre">
+    <section class="page-hero page-hero-cats has-fade-bottom" aria-labelledby="page-titre">
       <div class="page-hero-photo page-hero-photo-tarmac">
         <picture>
           <source media="(min-width: 768px)" type="image/avif" sizes="64vw"
@@ -90,15 +90,44 @@
             Étudier, voyager, développer vos affaires ou préparer une mobilité : Horizon Monde vous informe,
             vous oriente et vous met en relation avec les bons partenaires pour transformer une envie en projet concret.
           </p>
-          <nav class="jump-links jump-links-4 hero-anim" style="--d:4" aria-label="Aller à">
-            <a href="#etudes"><strong>Études</strong><small>Programmes, candidatures</small></a>
-            <a href="#voyages"><strong>Voyages</strong><small>Séjours, découvertes</small></a>
-            <a href="#affaires"><strong>Affaires</strong><small>Salons, prospection</small></a>
-            <a href="#mobilite"><strong>Mobilité</strong><small>Tests de langue, démarches</small></a>
-          </nav>
         </div>
       </div>
+      <div class="container cat-tiles-wrap">
+        <nav class="cat-tiles" aria-label="Les quatre opportunités">
+          <a class="cat-tile hero-anim" style="--d:4" href="#etudes">
+            <span class="cat-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/><path d="M22 10v6"/></svg></span>
+            <span class="cat-text"><span class="cat-name">Études</span><span class="cat-desc">Programmes, candidatures</span></span>
+            <svg class="icon cat-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+          </a>
+          <a class="cat-tile hero-anim" style="--d:5" href="#voyages">
+            <span class="cat-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.3c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg></span>
+            <span class="cat-text"><span class="cat-name">Voyages</span><span class="cat-desc">Séjours, découvertes</span></span>
+            <svg class="icon cat-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+          </a>
+          <a class="cat-tile hero-anim" style="--d:6" href="#affaires">
+            <span class="cat-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></span>
+            <span class="cat-text"><span class="cat-name">Affaires</span><span class="cat-desc">Salons, prospection</span></span>
+            <svg class="icon cat-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+          </a>
+          <a class="cat-tile hero-anim" style="--d:7" href="#mobilite">
+            <span class="cat-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m16.24 7.76-2.12 6.36-6.36 2.12 2.12-6.36z"/></svg></span>
+            <span class="cat-text"><span class="cat-name">Mobilité</span><span class="cat-desc">Tests de langue, démarches</span></span>
+            <svg class="icon cat-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+          </a>
+        </nav>
+      </div>
+      <div class="fade-edge fade-edge-bottom" style="--fade-color: var(--stone)" aria-hidden="true"></div>
     </section>
+
+    <!-- Barre des opportunités (visible pendant le défilement) -->
+    <nav class="cat-nav" aria-label="Opportunités" data-cat-nav>
+      <div class="container cat-nav-inner">
+        <a href="#etudes"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/><path d="M22 10v6"/></svg><span>Études</span></a>
+        <a href="#voyages"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.3c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg><span>Voyages</span></a>
+        <a href="#affaires"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg><span>Affaires</span></a>
+        <a href="#mobilite"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m16.24 7.76-2.12 6.36-6.36 2.12 2.12-6.36z"/></svg><span>Mobilité</span></a>
+      </div>
+    </nav>
 
     <!-- ============ POUR QUI ? ============ -->
     <section class="section bg-stone" aria-labelledby="profils-titre">
@@ -155,8 +184,9 @@
           <span class="chapter-num" aria-hidden="true">01</span>
         </figure>
         <div class="chapter-body reveal">
-          <p class="eyebrow">Études à l'étranger</p>
-          <h2 id="etudes-titre">Construire un projet académique <em>international</em></h2>
+          <p class="eyebrow">Opportunité 01 · Études à l'étranger</p>
+          <h2 id="etudes-titre" class="chapter-name">Études</h2>
+          <p class="chapter-tagline">Construire un projet académique <em>international</em></p>
           <p class="chapter-lead">Étudier à l'international se prépare : choix du pays et du programme, conditions d'admission, calendrier, budget. Nous vous aidons à y voir clair, étape par étape.</p>
           <h3 class="chapter-subtitle">Ce que nous faisons pour vous</h3>
           <ul class="chapter-list">
@@ -182,7 +212,9 @@
     </section>
 
     <!-- ============ 02 · VOYAGES & DÉCOUVERTES ============ -->
-    <section class="section bg-ink" id="voyages" aria-labelledby="voyages-titre">
+    <section class="section bg-ink has-fade-top has-fade-bottom" id="voyages" aria-labelledby="voyages-titre">
+      <div class="fade-edge fade-edge-top" style="--fade-color: var(--ivory)" aria-hidden="true"></div>
+      <div class="fade-edge fade-edge-bottom" style="--fade-color: var(--stone)" aria-hidden="true"></div>
       <div class="container chapter chapter-reverse">
         <figure class="chapter-media reveal">
           <picture>
@@ -194,8 +226,9 @@
           <span class="chapter-num" aria-hidden="true">02</span>
         </figure>
         <div class="chapter-body reveal">
-          <p class="eyebrow">Voyages & découvertes</p>
-          <h2 id="voyages-titre">Partir découvrir le monde, <em>sereinement</em></h2>
+          <p class="eyebrow">Opportunité 02 · Voyages & découvertes</p>
+          <h2 id="voyages-titre" class="chapter-name">Voyages</h2>
+          <p class="chapter-tagline">Partir découvrir le monde, <em>sereinement</em></p>
           <p class="chapter-lead">Un premier voyage à l'étranger, un séjour en famille, un voyage de groupe ou une découverte culturelle : nous vous aidons à choisir la formule adaptée à vos envies et à votre budget.</p>
           <h3 class="chapter-subtitle">Ce que nous faisons pour vous</h3>
           <ul class="chapter-list">
@@ -232,8 +265,9 @@
           <span class="chapter-num" aria-hidden="true">03</span>
         </figure>
         <div class="chapter-body reveal">
-          <p class="eyebrow">Affaires & salons</p>
-          <h2 id="affaires-titre">Développer vos affaires <em>au-delà des frontières</em></h2>
+          <p class="eyebrow">Opportunité 03 · Affaires & salons</p>
+          <h2 id="affaires-titre" class="chapter-name">Affaires</h2>
+          <p class="chapter-tagline">Développer vos affaires <em>au-delà des frontières</em></p>
           <p class="chapter-lead">Prospecter de nouveaux fournisseurs, visiter un salon professionnel ou rencontrer des partenaires : un déplacement d'affaires se prépare avec méthode.</p>
           <h3 class="chapter-subtitle">Ce que nous faisons pour vous</h3>
           <ul class="chapter-list">
@@ -270,8 +304,9 @@
           <span class="chapter-num" aria-hidden="true">04</span>
         </figure>
         <div class="chapter-body reveal">
-          <p class="eyebrow">Mobilité & tests de langue</p>
-          <h2 id="mobilite-titre">Préparer chaque étape <em>de votre départ</em></h2>
+          <p class="eyebrow">Opportunité 04 · Mobilité & tests de langue</p>
+          <h2 id="mobilite-titre" class="chapter-name">Mobilité</h2>
+          <p class="chapter-tagline">Préparer chaque étape <em>de votre départ</em></p>
           <p class="chapter-lead">Partir étudier ou s'installer à l'étranger demande souvent des étapes préalables, comme un test de langue. Nous vous aidons à identifier les démarches utiles à votre projet.</p>
           <h3 class="chapter-subtitle">Ce que nous faisons pour vous</h3>
           <ul class="chapter-list">
@@ -295,7 +330,8 @@
     </section>
 
     <!-- ============ APPEL FINAL ============ -->
-    <section class="section bg-photo closing" aria-labelledby="cta-titre">
+    <section class="section bg-photo closing has-fade-top" aria-labelledby="cta-titre">
+      <div class="fade-edge fade-edge-top" style="--fade-color: var(--ivory)" aria-hidden="true"></div>
       <picture class="closing-bg">
         <source media="(min-width: 768px)" type="image/avif" sizes="100vw"
           srcset="assets/img/photos/porte-large-1280.avif 1280w, assets/img/photos/porte-large-2000.avif 2000w">
